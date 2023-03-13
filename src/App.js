@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
 import './styles/App.css';
+import { addCV, addTitle } from './appMethods';
 
 class App extends Component {
   constructor() {
@@ -12,6 +13,7 @@ class App extends Component {
 
     this.state = {
       application: {
+        title: '',
         personalInfo: {
           fullName: '',
           address: '',
@@ -58,13 +60,19 @@ class App extends Component {
       },
       applications: []
     }
+
+    this.addTitle = addTitle.bind(this);
+    this.addCV = addCV.bind(this);
   }
   
   render() {
     return (
       <div className="screen">
         <Header />
-        <Sidebar />
+        <Sidebar 
+          titleChange={this.addTitle}
+          addApplication={this.addCV}
+        />
         <Main />
       </div>
     );
