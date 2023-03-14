@@ -1,7 +1,10 @@
+import uniqid from "uniqid";
+
 function addTitle(e) {
   this.setState({
     application: {
       title: e.target.value,
+      id: this.state.application.id,
       personalInfo: {
         fullName: '',
         address: '',
@@ -58,6 +61,7 @@ function addCV(e) {
     applications: this.state.applications.concat(this.state.application),
     application: {
       title: '',
+      id: uniqid(),
       personalInfo: {
         fullName: '',
         address: '',

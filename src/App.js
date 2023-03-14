@@ -6,6 +6,7 @@ import Sidebar from './components/Sidebar';
 import Main from './components/Main';
 import './styles/App.css';
 import { addCV, addTitle } from './appMethods';
+import uniqid from "uniqid";
 
 class App extends Component {
   constructor() {
@@ -14,6 +15,7 @@ class App extends Component {
     this.state = {
       application: {
         title: '',
+        id: uniqid(),
         personalInfo: {
           fullName: '',
           address: '',
