@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 
 class AddCVPopUp extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-
   render() {
     const { titleChange, addApplication, hidePopUp } = this.props;
 

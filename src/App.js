@@ -1,12 +1,12 @@
 /* eslint-disable react/prefer-stateless-function */
 /* eslint-disable react/jsx-filename-extension */
 import React, { Component } from 'react';
+import uniqid from "uniqid";
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
 import './styles/App.css';
 import { addCV, addTitle } from './appMethods';
-import uniqid from "uniqid";
 
 class App extends Component {
   constructor() {
@@ -74,6 +74,7 @@ class App extends Component {
         <Sidebar 
           titleChange={this.addTitle}
           addApplication={this.addCV}
+          applications={this.state.applications}
         />
         <Main />
       </div>

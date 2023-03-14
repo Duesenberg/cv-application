@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import '../styles/Sidebar.css';
 import AddCVPopUp from './AddCVPopUp';
+import ApplicationList from './ApplicationList';
 
 class Sidebar extends Component {
   constructor(props) {
@@ -42,6 +43,7 @@ class Sidebar extends Component {
             titleChange={titleChange} 
             addApplication={addApplication}
           /> : null}
+        <ApplicationList applications={applications} />
       </div>
     );
   }
