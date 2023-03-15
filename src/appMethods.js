@@ -1,5 +1,6 @@
 import uniqid from "uniqid";
 
+//adds title when creating a new application
 function addTitle(e) {
   this.setState({
     application: {
@@ -50,8 +51,6 @@ function addTitle(e) {
       }
     }
   });
-
-  console.log(this.state);
 }
 
 function addCV(e) {
@@ -107,8 +106,16 @@ function addCV(e) {
       }
     }
   });
-
-  console.log(this.state);
 }
 
-export { addTitle, addCV };
+
+function deleteApplication (e) {
+  this.setState({
+    applications: this.state.applications.filter((application) => {
+      if (application.id !== e.target.id) return application
+      else return null
+    })
+  })
+}
+
+export { addTitle, addCV, deleteApplication };

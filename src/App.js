@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
 import './styles/App.css';
-import { addCV, addTitle } from './appMethods';
+import { addCV, addTitle, deleteApplication } from './appMethods';
 
 class App extends Component {
   constructor() {
@@ -65,6 +65,7 @@ class App extends Component {
 
     this.addTitle = addTitle.bind(this);
     this.addCV = addCV.bind(this);
+    this.deleteApplication = deleteApplication.bind(this);
   }
   
   render() {
@@ -72,9 +73,10 @@ class App extends Component {
       <div className="screen">
         <Header />
         <Sidebar 
-          titleChange={this.addTitle}
+          titleAdd={this.addTitle}
           addApplication={this.addCV}
           applications={this.state.applications}
+          deleteApplication={this.deleteApplication}
         />
         <Main />
       </div>

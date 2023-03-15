@@ -31,7 +31,7 @@ class Sidebar extends Component {
 
   render() {
     const { 
-      titleChange, application, applications, addApplication
+      titleAdd, application, applications, addApplication, deleteApplication
     } = this.props;
 
     return (
@@ -40,10 +40,13 @@ class Sidebar extends Component {
         {this.state.popUpVisible ? 
           <AddCVPopUp 
             hidePopUp={this.hidePopUp}
-            titleChange={titleChange} 
+            titleAdd={titleAdd} 
             addApplication={addApplication}
           /> : null}
-        <ApplicationList applications={applications} />
+        <ApplicationList 
+          applications={applications}
+          deleteApplication={deleteApplication} 
+        />
       </div>
     );
   }
