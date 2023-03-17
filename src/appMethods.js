@@ -112,10 +112,16 @@ function addCV(e) {
 function deleteApplication (e) {
   this.setState({
     applications: this.state.applications.filter((application) => {
-      if (application.id !== e.target.id) return application
+      if (application.id !== e.target.dataset.id) return application
       else return null
     })
   })
 }
 
-export { addTitle, addCV, deleteApplication };
+function selectCV (e) {
+  this.setState({
+    selectedApplication: e.target.dataset.id
+  })
+}
+
+export { addTitle, addCV, deleteApplication, selectCV };
