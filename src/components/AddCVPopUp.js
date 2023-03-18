@@ -7,7 +7,7 @@ class AddCVPopUp extends Component {
   }
 
   render() {
-    const { titleAdd, hidePopUp } = this.props;
+    const { titleAdd, addApplication, hidePopUp } = this.props;
 
     return (
       <form className='pop-up' onSubmit={this.handleSubmit}>
