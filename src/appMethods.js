@@ -73,7 +73,8 @@ function addCV(e) {
           name: '',
           institution: '',
           startYear: '',
-          endYear: ''
+          endYear: '',
+          id: uniqid()
         },
         degrees: []
       },

@@ -28,7 +28,8 @@ class App extends Component {
             name: '',
             institution: '',
             startYear: '',
-            endYear: ''
+            endYear: '',
+            id: uniqid()
           },
           degrees: []
         },
