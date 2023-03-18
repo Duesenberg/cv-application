@@ -13,7 +13,7 @@ class PersInfoSection extends Component {
           <p className='content'>{application.personalInfo.fullName}</p>
         </div>
 
-        <div className='full-name'>
+        <div className='living-address'>
           <p className='name'>Residential Address</p>
           <p className='content'>{application.personalInfo.address}</p>
         </div>
