@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
 import './styles/App.css';
-import { addCV, addTitle, deleteApplication } from './appMethods';
+import { addCV, addTitle, deleteApplication, selectCV } from './appMethods';
 
 class App extends Component {
   constructor() {
@@ -60,12 +60,14 @@ class App extends Component {
           list: []
         }
       },
-      applications: []
+      applications: [],
+      selectedApplication: null
     }
 
     this.addTitle = addTitle.bind(this);
     this.addCV = addCV.bind(this);
     this.deleteApplication = deleteApplication.bind(this);
+    this.selectCV = selectCV.bind(this);
   }
   
   render() {
@@ -77,8 +79,10 @@ class App extends Component {
           addApplication={this.addCV}
           applications={this.state.applications}
           deleteApplication={this.deleteApplication}
-        />
-        <Main />
+          />
+        <Main
+          applications={this.state.applications}
+       />
       </div>
     );
   }

@@ -118,4 +118,10 @@ function deleteApplication (e) {
   })
 }
 
-export { addTitle, addCV, deleteApplication };
+function selectCV (e) {
+  this.setState({
+    selectedApplication: e.target.dataset.id
+  })
+}
+
+export { addTitle, addCV, deleteApplication, selectCV };
