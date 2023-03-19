@@ -10,8 +10,12 @@ class DegreeList extends Component {
           <div
             key={degree.id}
             className='degree'>
-              {degree.name + ', ' + degree.institution + ', ' 
-              + degree.startYear + '-' + degree.endYear}
+              <p className='text'>
+                {degree.name + ', ' + degree.institution + ', ' 
+                + degree.startYear + '-' + degree.endYear}
+              </p>
+              <button className='edit'>Edit</button>
+              <button className='remove'>Remove</button>
           </div>    
         })}
       </div>

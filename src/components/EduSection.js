@@ -9,7 +9,6 @@ class EduSection extends Component {
       <div className='education-section'>
         <p className='name'>Education</p>
         <DegreeList degrees={application.education.degrees} />
-        <button className='edit'>Edit</button>
       </div>
     )
   }
