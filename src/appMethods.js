@@ -18,7 +18,8 @@ function addTitle(e) {
           name: '',
           institution: '',
           startYear: '',
-          endYear: ''
+          endYear: '',
+          id: this.state.application.education.degree.id
         },
         degrees: []
       },
@@ -28,8 +29,12 @@ function addTitle(e) {
           position: '',
           startYear: '',
           endYear: '',
-          workDetail: '',
-          workDetails: []
+          workDetail: {
+            description: '',
+            id: this.state.application.workExperience.experience.workDetail.id
+          },
+          workDetails: [],
+          id: this.state.application.workExperience.experience.id
         },
         experiences: []
       },
@@ -84,8 +89,12 @@ function addCV(e) {
           position: '',
           startYear: '',
           endYear: '',
-          workDetail: '',
-          workDetails: []
+          workDetail: {
+            description: '',
+            id: uniqid()
+          },
+          workDetails: [],
+          id: uniqid()
         },
         experiences: []
       },

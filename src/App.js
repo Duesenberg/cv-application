@@ -39,8 +39,12 @@ class App extends Component {
             position: '',
             startYear: '',
             endYear: '',
-            workDetail: '',
-            workDetails: []
+            workDetail: {
+              description: '',
+              id: uniqid()
+            },
+            workDetails: [],
+            id: uniqid()
           },
           experiences: []
         },
