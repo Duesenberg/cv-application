@@ -5,6 +5,7 @@ import TitleSection from './TitleSection';
 import PersInfoSection from './PersInfoSection';
 import EduSection from './EduSection';
 import WorkSection from './WorkSection';
+import SkillSection from './SkillSection';
 import '../styles/Main.css';
 
 class Main extends Component {
@@ -21,6 +22,7 @@ class Main extends Component {
                 <PersInfoSection application={application} />
                 <EduSection application={application} />
                 <WorkSection application={application} />
+                <SkillSection skills={application.skills} />
               </div>
             )
           }

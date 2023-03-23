@@ -49,19 +49,31 @@ class App extends Component {
           experiences: []
         },
         skills: {
-          skill: '',
+          skill: {
+            description: '',
+            id: uniqid()
+          },
           skills: []
         },
         projects: {
-          project: '',
+          project: {
+            description: '',
+            id: uniqid()
+          },
           projects: []
         },
         leadership: {
-          role: '',
+          role: {
+            description: '',
+            id: uniqid()
+          },
           roles: []
         },
         achievements: {
-          item: '',
+          item: {
+            description: '',
+            id: uniqid()
+          },
           list: []
         }
       },

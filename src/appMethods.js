@@ -39,19 +39,31 @@ function addTitle(e) {
         experiences: []
       },
       skills: {
-        skill: '',
+        skill: {
+          description: '',
+          id: this.state.application.skills.skill.id
+        },
         skills: []
       },
       projects: {
-        project: '',
+        project: {
+          description: '',
+          id: this.state.application.projects.project.id
+        },
         projects: []
       },
       leadership: {
-        role: '',
+        role: {
+          description: '',
+          id: this.state.application.leadership.role.id
+        },
         roles: []
       },
       achievements: {
-        item: '',
+        item: {
+          description: '',
+          id: this.state.application.achievements.item.id
+        },
         list: []
       }
     }
@@ -99,19 +111,31 @@ function addCV(e) {
         experiences: []
       },
       skills: {
-        skill: '',
+        skill: {
+          description: '',
+          id: uniqid()
+        },
         skills: []
       },
       projects: {
-        project: '',
+        project: {
+          description: '',
+          id: uniqid()
+        },
         projects: []
       },
       leadership: {
-        role: '',
+        role: {
+          description: '',
+          id: uniqid()
+        },
         roles: []
       },
       achievements: {
-        item: '',
+        item: {
+          description: '',
+          id: uniqid()
+        },
         list: []
       }
     }
