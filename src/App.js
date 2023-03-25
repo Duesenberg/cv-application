@@ -8,6 +8,7 @@ import Main from './components/Main';
 import './styles/App.css';
 import { addCV, addTitle, deleteApplication, selectCV } from './appMethods';
 import editCVTitle from './components/titleSecMethods';
+import { editPersonalInfo } from './components/persInfoSecMethods';
 
 class App extends Component {
   constructor() {
@@ -87,6 +88,7 @@ class App extends Component {
     this.deleteApplication = deleteApplication.bind(this);
     this.selectCV = selectCV.bind(this);
     this.editCVTitle = editCVTitle.bind(this);
+    this.editFullName = editPersonalInfo.bind(this);
   }
   
   render() {
@@ -103,7 +105,7 @@ class App extends Component {
         <Main
           state={this.state}
           applications={this.state.applications}
-          editCVTitle={this.editCVTitle}
+          editCVTitle={this.editCVTitle} editPersonalInfo={this.editPersonalInfo}
        />
       </div>
     );

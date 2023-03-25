@@ -13,7 +13,7 @@ import '../styles/Main.css';
 
 class Main extends Component {
   render() {
-    const { applications, state, editCVTitle } = this.props;
+    const { applications, state, editCVTitle, editPersonalInfo } = this.props;
 
     return (
       <div className="main">
@@ -26,7 +26,8 @@ class Main extends Component {
                   <TitleSection 
                     application={application}
                     editCVTitle={editCVTitle} />
-                  <PersInfoSection application={application} />
+                  <PersInfoSection 
+                    application={application} editPersonalInfo={editPersonalInfo} />
                   <EduSection application={application} />
                   <WorkSection application={application} />
                   <SkillSection skills={application.skills} />

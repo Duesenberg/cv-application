@@ -1,17 +1,22 @@
-//methods used in App.js for the title section of Main.js
+//methods used in App.js for the personal info section in Main.js
 
-function editCVTitle (e) {
-  //find index of application, create copy of the application & applications arr
+function editPersonalInfo (e) {
   const index = this.state.applications.findIndex((application) => {
     return application.id === e.target.dataset.id;
   });
   const application = Object.assign({}, this.state.applications[index]);
   const applications = Object.assign([], this.state.applications);
+  const id = e.target.id;
 
-  //change title of selected application, assign it to applications & change state
-  application.title = e.target.value;
+  switch (id) {
+    case "fullName": application.personalInfo.fullName = e.target.value;
+      break;
+  }
+  
   applications[index] = application;
   this.setState({applications: applications});
 }
 
-export default editCVTitle;
+
+
+export { editPersonalInfo };
