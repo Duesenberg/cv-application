@@ -13,22 +13,26 @@ import '../styles/Main.css';
 
 class Main extends Component {
   render() {
-    const { applications } = this.props;
+    const { applications, state, editCVTitle } = this.props;
 
     return (
       <div className="main">
-        { applications.filter((application) => {
-          if (application.id === application.selectedApplication) {
+        { applications.map((application) => {
+          if (application.id === state.selectedApplication) {
             return (
-              <div className='container'>
-                <TitleSection application={application} />
-                <PersInfoSection application={application} />
-                <EduSection application={application} />
-                <WorkSection application={application} />
-                <SkillSection skills={application.skills} />
-                <ProjectsSection projects={application.projects} />
-                <LeadershipSection leadership={application.leadership} />
-                <AchievementSection achievements={application.achievements} />
+              <div 
+                className='container'
+                key={(application.id)}>
+                  <TitleSection 
+                    application={application}
+                    editCVTitle={editCVTitle} />
+                  <PersInfoSection application={application} />
+                  <EduSection application={application} />
+                  <WorkSection application={application} />
+                  <SkillSection skills={application.skills} />
+                  <ProjectsSection projects={application.projects} />
+                  <LeadershipSection leadership={application.leadership} />
+                  <AchievementSection achievements={application.achievements} />
               </div>
             )
           }

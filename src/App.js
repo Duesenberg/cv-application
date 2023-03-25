@@ -6,7 +6,8 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
 import './styles/App.css';
-import { addCV, addTitle, deleteApplication, selectCV } from './appMethods';
+import { addCV, addTitle, deleteApplication, selectCV,
+  editCVTitle } from './appMethods';
 
 class App extends Component {
   constructor() {
@@ -85,6 +86,7 @@ class App extends Component {
     this.addCV = addCV.bind(this);
     this.deleteApplication = deleteApplication.bind(this);
     this.selectCV = selectCV.bind(this);
+    this.editCVTitle = editCVTitle.bind(this);
   }
   
   render() {
@@ -96,9 +98,12 @@ class App extends Component {
           addApplication={this.addCV}
           applications={this.state.applications}
           deleteApplication={this.deleteApplication}
+          selectApplication={this.selectCV}
           />
         <Main
+          state={this.state}
           applications={this.state.applications}
+          editCVTitle={this.editCVTitle}
        />
       </div>
     );

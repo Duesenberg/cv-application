@@ -31,8 +31,8 @@ class Sidebar extends Component {
 
   render() {
     const { 
-      titleAdd, application, applications, addApplication, deleteApplication
-    } = this.props;
+      titleAdd, application, applications, addApplication, deleteApplication,
+      selectApplication } = this.props;
 
     return (
       <div className="sidebar">
@@ -45,7 +45,8 @@ class Sidebar extends Component {
           /> : null}
         <ApplicationList 
           applications={applications}
-          deleteApplication={deleteApplication} 
+          deleteApplication={deleteApplication}
+          selectApplication={selectApplication}
         />
       </div>
     );

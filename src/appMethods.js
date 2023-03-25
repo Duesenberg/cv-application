@@ -142,7 +142,6 @@ function addCV(e) {
   });
 }
 
-
 function deleteApplication (e) {
   this.setState({
     applications: this.state.applications.filter((application) => {
@@ -152,10 +151,27 @@ function deleteApplication (e) {
   })
 }
 
+//changes the state of the selected cv
 function selectCV (e) {
   this.setState({
     selectedApplication: e.target.dataset.id
   })
 }
 
-export { addTitle, addCV, deleteApplication, selectCV };
+function editCVTitle (e) {
+  //find index of application, create copy of the application & applications arr
+  const index = this.state.applications.findIndex((application) => {
+    return application.id === e.target.dataset.id;
+  });
+  const application = Object.assign({}, this.state.applications[index]);
+  const applications = Object.assign([], this.state.applications);
+
+  //change title of selected application, assign it to applications & change state
+  application.title = e.target.value;
+  applications[index] = application;
+  this.setState({applications: applications});
+
+  console.log(this.state);
+}
+
+export { addTitle, addCV, deleteApplication, selectCV, editCVTitle };
