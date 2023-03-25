@@ -6,8 +6,8 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
 import './styles/App.css';
-import { addCV, addTitle, deleteApplication, selectCV,
-  editCVTitle } from './appMethods';
+import { addCV, addTitle, deleteApplication, selectCV } from './appMethods';
+import editCVTitle from './components/titleSecMethods';
 
 class App extends Component {
   constructor() {

@@ -13,12 +13,8 @@ class TitleSection extends Component {
 
   toggleEditMode() {
     this.state.editMode === false ?
-      this.setState({
-        editMode: true
-      }) :
-      this.setState({
-        editMode: false
-      });
+      this.setState({editMode: true}) :
+      this.setState({editMode: false});
   }
 
   render() {
@@ -32,7 +28,7 @@ class TitleSection extends Component {
           <input
             type='text' name='cvTitle' id='cvTitle'
             placeholder={application.title} data-id={application.id}
-            onChange={editCVTitle} /> }
+            onChange={editCVTitle} required /> }
         <button className='edit' onClick={this.toggleEditMode}>Edit</button>
       </div>
     )
