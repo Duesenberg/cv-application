@@ -11,6 +11,8 @@ function editPersonalInfo (e) {
   switch (id) {
     case "fullName": application.personalInfo.fullName = e.target.value;
       break;
+    case "homeAddress": application.personalInfo.address = e.target.value;
+      break;
   }
   
   applications[index] = application;

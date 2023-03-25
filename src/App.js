@@ -88,7 +88,7 @@ class App extends Component {
     this.deleteApplication = deleteApplication.bind(this);
     this.selectCV = selectCV.bind(this);
     this.editCVTitle = editCVTitle.bind(this);
-    this.editFullName = editPersonalInfo.bind(this);
+    this.editPersonalInfo = editPersonalInfo.bind(this);
   }
   
   render() {

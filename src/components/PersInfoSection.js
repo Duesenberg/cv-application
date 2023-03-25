@@ -13,6 +13,7 @@ class PersInfoSection extends Component {
     }
 
     this.toggleNameEdit = this.toggleNameEdit.bind(this);
+    this.toggleaAdressEdit = this.toggleaAdressEdit.bind(this);
   }
 
   toggleNameEdit() {
@@ -55,18 +56,23 @@ class PersInfoSection extends Component {
         <div className='full-name'>
           <p className='name'>Full Name</p>
           { this.state.nameEdit === false ?
-          <p className='content'>{application.personalInfo.fullName}</p> :
-          <input
-            type='text' name='fullName' id='fullName'
-            placeholder={application.personalInfo.fullName} data-id={application.id}
-            onChange={editPersonalInfo} required /> }
+            <p className='content'>{application.personalInfo.fullName}</p> :
+            <input
+              type='text' name='fullName' id='fullName'
+              placeholder={application.personalInfo.fullName} data-id={application.id}
+              onChange={editPersonalInfo} required /> }
           <button className='edit' onClick={this.toggleNameEdit}>Edit</button>
         </div>
 
         <div className='living-address'>
           <p className='name'>Residential Address</p>
-          <p className='content'>{application.personalInfo.address}</p>
-          <button className='edit'>Edit</button>
+          { this.state.addressEdit === false ?
+            <p className='content'>{application.personalInfo.address}</p> :
+            <input
+              type='text' name='homeAddress' id='homeAddress'
+              placeholder={application.personalInfo.address} data-id={application.id}
+              onChange={editPersonalInfo} required /> }
+          <button className='edit' onClick={this.toggleaAdressEdit}>Edit</button>
         </div>
 
         <div className='phone-number'>
