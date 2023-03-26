@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { toggleEditState } from './persInfoSecMethods';
 
 class PersInfoSection extends Component {
   constructor(props) {
@@ -12,38 +13,7 @@ class PersInfoSection extends Component {
       dobEdit: false
     }
 
-    this.toggleNameEdit = this.toggleNameEdit.bind(this);
-    this.toggleaAdressEdit = this.toggleaAdressEdit.bind(this);
-  }
-
-  toggleNameEdit() {
-    this.state.nameEdit === false ?
-      this.setState({nameEdit: true}) :
-      this.setState({nameEdit: false});
-  }
-
-  toggleaAdressEdit() {
-    this.state.addressEdit === false ?
-      this.setState({addressEdit: true}) :
-      this.setState({addressEdit: false});
-  }
-
-  togglePhoneEdit() {
-    this.state.phoneEdit === false ?
-      this.setState({phoneEdit: true}) :
-      this.setState({phoneEdit: false});
-  }
-
-  toggleEmailEdit() {
-    this.state.emailEdit === false ?
-      this.setState({emailEdit: true}) :
-      this.setState({emailEdit: false});
-  }
-
-  toggleDobEdit() {
-    this.state.dobEdit === false ?
-      this.setState({dobEdit: true}) :
-      this.setState({dobEdit: false});
+    this.toggleEditState = toggleEditState.bind(this);
   }
 
   render() {
@@ -61,7 +31,9 @@ class PersInfoSection extends Component {
               type='text' name='fullName' id='fullName'
               placeholder={application.personalInfo.fullName} data-id={application.id}
               onChange={editPersonalInfo} required /> }
-          <button className='edit' onClick={this.toggleNameEdit}>Edit</button>
+          <button 
+            className='edit' onClick={this.toggleEditState}
+            data-id="fullName">Edit</button>
         </div>
 
         <div className='living-address'>
@@ -72,25 +44,48 @@ class PersInfoSection extends Component {
               type='text' name='homeAddress' id='homeAddress'
               placeholder={application.personalInfo.address} data-id={application.id}
               onChange={editPersonalInfo} required /> }
-          <button className='edit' onClick={this.toggleaAdressEdit}>Edit</button>
+          <button 
+            className='edit' onClick={this.toggleEditState}
+            data-id="homeAddress">Edit</button>
         </div>
 
         <div className='phone-number'>
           <p className='name'>Phone Number</p>
-          <p className='content'>{application.personalInfo.phoneNumber}</p>
-          <button className='edit'>Edit</button>
+          { this.state.phoneEdit === false ?
+            <p className='content'>{application.personalInfo.phoneNumber}</p> :
+            <input
+              type='tel' name='telNum' id='telNum'
+              placeholder={application.personalInfo.phoneNumber} data-id={application.id}
+              onChange={editPersonalInfo} required /> }
+          <button 
+            className='edit' onClick={this.toggleEditState}
+            data-id="telNum">Edit</button>
         </div>
 
         <div className='email'>
           <p className='name'>E-Mail Address</p>
-          <p className='content'>{application.personalInfo.email}</p>
-          <button className='edit'>Edit</button>
+          { this.state.emailEdit === false ?
+            <p className='content'>{application.personalInfo.email}</p> :
+            <input
+              type='email' name='mail' id='mail'
+              placeholder={application.personalInfo.email} data-id={application.id}
+              onChange={editPersonalInfo} required /> }
+          <button 
+            className='edit' onClick={this.toggleEditState}
+            data-id="mail">Edit</button>
         </div>
 
         <div className='date-of-birth'>
           <p className='name'>Date of Birth</p>
-          <p className='content'>{application.personalInfo.dateOfBirth}</p>
-          <button className='edit'>Edit</button>
+          { this.state.dobEdit === false ?
+            <p className='content'>{application.personalInfo.dateOfBirth}</p> :
+            <input
+              type='date' name='dob' id='dob'
+              placeholder={application.personalInfo.dateOfBirth} data-id={application.id}
+              onChange={editPersonalInfo} required /> }
+          <button 
+            className='edit' onClick={this.toggleEditState}
+            data-id="dob">Edit</button>
         </div>
       </div>
     )
