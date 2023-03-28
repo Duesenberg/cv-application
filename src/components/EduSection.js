@@ -37,7 +37,7 @@ class EduSection extends Component {
         <AddDegreePopUp 
           application={application} addDegree={addDegree} 
           hidePopUp={this.hidePopUp} addDegreeInfo={addDegreeInfo} /> : null}
-        <DegreeList application={application} />
+        <DegreeList application={application} editDegree={editDegree} />
       </div>
     )
   }
