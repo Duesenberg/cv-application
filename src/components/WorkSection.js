@@ -7,7 +7,7 @@ class WorkSection extends Component {
 
     return (
       <div className='work-exp-section'>
-        <p className='name'>Education</p>
+        <p className='name'>Work Experience</p>
         <WorkExpList experiences={application.workExperience.experiences} />
       </div>
     )

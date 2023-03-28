@@ -25,11 +25,12 @@ class DegreeList extends Component {
   }
 
   render() {
-    const { degrees } = this.props;
+    const { application } = this.props;
 
     return (
       <div className='degrees'>
-        {degrees.map((degree) => {
+        {application.education.degrees.map((degree) => {
+          return (
           <div
             key={degree.id}
             className='degree'>
@@ -50,7 +51,7 @@ class DegreeList extends Component {
                 }
               <button className='edit' onClick={this.toggleEditMode}>Edit</button>
               <button data-id={degree.id} className='remove'>Remove</button>
-          </div>    
+          </div>)   
         })}
       </div>
     )

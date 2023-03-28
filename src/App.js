@@ -9,6 +9,7 @@ import './styles/App.css';
 import { addCV, addTitle, deleteApplication, selectCV } from './appMethods';
 import editCVTitle from './components/titleSecMethods';
 import { editPersonalInfo } from './components/persInfoSecMethods';
+import { addDegree, editDegree, addDegreeInfo } from './components/eduSecMethods';
 
 class App extends Component {
   constructor() {
@@ -89,6 +90,9 @@ class App extends Component {
     this.selectCV = selectCV.bind(this);
     this.editCVTitle = editCVTitle.bind(this);
     this.editPersonalInfo = editPersonalInfo.bind(this);
+    this.addDegree = addDegree.bind(this);
+    this.editDegree = editDegree.bind(this);
+    this.addDegreeInfo = addDegreeInfo.bind(this);
   }
   
   render() {
@@ -106,6 +110,8 @@ class App extends Component {
           state={this.state}
           applications={this.state.applications}
           editCVTitle={this.editCVTitle} editPersonalInfo={this.editPersonalInfo}
+          addDegree={this.addDegree} editDegree={this.editDegree} 
+          addDegreeInfo={this.addDegreeInfo}
        />
       </div>
     );

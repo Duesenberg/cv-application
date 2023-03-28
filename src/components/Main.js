@@ -13,7 +13,8 @@ import '../styles/Main.css';
 
 class Main extends Component {
   render() {
-    const { applications, state, editCVTitle, editPersonalInfo } = this.props;
+    const { applications, state, editCVTitle, editPersonalInfo,
+      addDegree, editDegree, addDegreeInfo } = this.props;
 
     return (
       <div className="main">
@@ -28,7 +29,9 @@ class Main extends Component {
                     editCVTitle={editCVTitle} />
                   <PersInfoSection 
                     application={application} editPersonalInfo={editPersonalInfo} />
-                  <EduSection application={application} />
+                  <EduSection 
+                    application={application} addDegree={addDegree} 
+                    editDegree={editDegree} addDegreeInfo={addDegreeInfo} />
                   <WorkSection application={application} />
                   <SkillSection skills={application.skills} />
                   <ProjectsSection projects={application.projects} />
