@@ -82,4 +82,22 @@ function editDegree(e) {
   this.setState({applications: applications});
 }
 
-export { addDegree, editDegree, addDegreeInfo };
+//delete a degree from the list
+function deleteDegree (e) {
+  const appIndex = this.state.applications.findIndex((application) => {
+    return application.id === e.target.id;
+  });
+  const application = Object.assign({}, this.state.applications[appIndex]);
+  const applications = Object.assign([], this.state.applications);
+  let degrees = application.education.degrees;
+
+  degrees = degrees.filter((degree) => {
+    if (degree.id === e.target.dataset.id) return null
+    else return degree;
+  });
+  application.education.degrees = degrees;
+  applications[appIndex] = application;
+  this.setState({applications: applications});
+}
+
+export { addDegree, editDegree, addDegreeInfo, deleteDegree };

@@ -27,7 +27,8 @@ class EduSection extends Component {
   }
 
   render() {
-    const { application, addDegree, editDegree, addDegreeInfo } = this.props;
+    const { application, addDegree, editDegree, addDegreeInfo,
+      deleteDegree } = this.props;
 
     return (
       <div className='education-section'>
@@ -37,7 +38,8 @@ class EduSection extends Component {
         <AddDegreePopUp 
           application={application} addDegree={addDegree} 
           hidePopUp={this.hidePopUp} addDegreeInfo={addDegreeInfo} /> : null}
-        <DegreeList application={application} editDegree={editDegree} />
+        <DegreeList application={application} editDegree={editDegree}
+          deleteDegree={deleteDegree} />
       </div>
     )
   }

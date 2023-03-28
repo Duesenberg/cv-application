@@ -31,7 +31,7 @@ class DegreeList extends Component {
   }
 
   render() {
-    const { application, editDegree } = this.props;
+    const { application, editDegree, deleteDegree } = this.props;
 
     return (
       <div className='degrees'>
@@ -63,7 +63,9 @@ class DegreeList extends Component {
               <button 
                 className='edit' data-id={degree.id} 
                 onClick={this.handleEditClick}>Edit</button>
-              <button data-id={degree.id} className='remove'>Remove</button>
+              <button 
+                data-id={degree.id} id={application.id} className='remove'
+                onClick={deleteDegree}>Remove</button>
           </div>)   
         })}
       </div>
