@@ -44,16 +44,20 @@ class DegreeList extends Component {
                 <div className='edit-box'>
                   <input 
                     type='text' name='fullName' id='fullName' 
-                    onChange={editDegree} required />, 
+                    onChange={editDegree} data-apid={application.id} 
+                    data-degid={degree.id} required />, 
                   <input 
                     type='text' name='institution' id='institution' 
-                    onChange={editDegree} required />, 
+                    onChange={editDegree} data-apid={application.id} 
+                    data-degid={degree.id} required />, 
                   <input 
                     type='date' name='startYear' id='startYear' 
-                    onChange={editDegree} required />-
+                    onChange={editDegree} data-apid={application.id} 
+                    data-degid={degree.id} required />-
                   <input 
                     type='date' name='endYear' id='endYear' 
-                    onChange={editDegree} required />
+                    onChange={editDegree} data-apid={application.id} 
+                    data-degid={degree.id} required />
                 </div> :
                 <p className='text'>
                   {degree.name + ', ' + degree.institution + ', ' 

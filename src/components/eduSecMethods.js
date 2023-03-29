@@ -53,12 +53,12 @@ function addDegree (e) {
 //edit an existing degree
 function editDegree(e) {
   const appIndex = this.state.applications.findIndex((application) => {
-    return application.id === e.target.dataset.id;
+    return application.id === e.target.dataset.apid;
   });
   const application = Object.assign({}, this.state.applications[appIndex]);
   const applications = Object.assign([], this.state.applications);
   const degreeIndex = application.education.degrees.findIndex((degree) => {
-    return degree.id === e.target.id;
+    return degree.id === e.target.dataset.degid;
   });
   const targetId = e.target.id;
 
