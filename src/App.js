@@ -11,6 +11,7 @@ import editCVTitle from './components/titleSecMethods';
 import { editPersonalInfo } from './components/persInfoSecMethods';
 import { addDegree, editDegree, addDegreeInfo,
   deleteDegree } from './components/eduSecMethods';
+import { addWork, addWorkInfo, deleteWork } from './components/workSecMethods';
 
 class App extends Component {
   constructor() {
@@ -47,8 +48,8 @@ class App extends Component {
               description: '',
               id: uniqid()
             },
-            workDetails: [],
-            id: uniqid()
+            id: uniqid(),
+            workDetails: []
           },
           experiences: []
         },
@@ -95,6 +96,9 @@ class App extends Component {
     this.editDegree = editDegree.bind(this);
     this.addDegreeInfo = addDegreeInfo.bind(this);
     this.deleteDegree = deleteDegree.bind(this);
+    this.addWork = addWork.bind(this);
+    this.addWorkInfo = addWorkInfo.bind(this);
+    this.deleteWork = deleteWork.bind(this);
   }
   
   render() {
@@ -114,6 +118,8 @@ class App extends Component {
           editCVTitle={this.editCVTitle} editPersonalInfo={this.editPersonalInfo}
           addDegree={this.addDegree} editDegree={this.editDegree} 
           addDegreeInfo={this.addDegreeInfo} deleteDegree={this.deleteDegree}
+          addWork={this.addWork} addWorkInfo={this.addWorkInfo} 
+          deleteWork={this.deleteWork}
        />
       </div>
     );

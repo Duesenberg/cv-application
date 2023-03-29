@@ -33,8 +33,8 @@ function addTitle(e) {
             description: '',
             id: this.state.application.workExperience.experience.workDetail.id
           },
-          workDetails: [],
-          id: this.state.application.workExperience.experience.id
+          id: this.state.application.workExperience.experience.id,
+          workDetails: []
         },
         experiences: []
       },
@@ -105,8 +105,8 @@ function addCV(e) {
             description: '',
             id: uniqid()
           },
-          workDetails: [],
-          id: uniqid()
+          id: uniqid(),
+          workDetails: []
         },
         experiences: []
       },
