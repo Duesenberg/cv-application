@@ -15,7 +15,7 @@ class Main extends Component {
   render() {
     const { applications, state, editCVTitle, editPersonalInfo,
       addDegree, editDegree, addDegreeInfo, deleteDegree, addWork, 
-      addWorkInfo, deleteWork } = this.props;
+      addWorkInfo, deleteWork, editWork } = this.props;
 
     return (
       <div className="main">
@@ -36,7 +36,8 @@ class Main extends Component {
                     deleteDegree={deleteDegree} />
                   <WorkSection 
                     application={application} addWork={addWork} 
-                    addWorkInfo={addWorkInfo} deleteWork={deleteWork} />
+                    addWorkInfo={addWorkInfo} deleteWork={deleteWork}
+                    editWork={editWork} />
                   <SkillSection skills={application.skills} />
                   <ProjectsSection projects={application.projects} />
                   <LeadershipSection leadership={application.leadership} />

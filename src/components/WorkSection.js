@@ -27,7 +27,8 @@ class WorkSection extends Component {
   }
 
   render() {
-    const { application, addWork, addWorkInfo, deleteWork } = this.props;
+    const { application, addWork, addWorkInfo, deleteWork, 
+      editWork } = this.props;
 
     return (
       <div className='work-exp-section'>
@@ -39,7 +40,7 @@ class WorkSection extends Component {
         <button className='add-work-exp' onClick={this.showPopUp}>Add</button>
         <WorkExpList 
           application={application}
-          deleteWork={deleteWork} />
+          deleteWork={deleteWork} editWork={editWork} />
       </div>
     )
   }
