@@ -3,11 +3,11 @@ import DetailsList from './DetailsList';
 
 class WorkExpList extends Component {
   render() {
-    const { experiences } = this.props;
+    const { application, deleteWork } = this.props;
 
     return (
       <div className='experiences'>
-        {experiences.map((experience) => {
+        {application.workExperience.experiences.map((experience) => {
           return (
             <div
             key={experience.id}
@@ -18,7 +18,9 @@ class WorkExpList extends Component {
                   '(' + experience.startYear + ' - ' + experience.endYear + ')'}
               </div>
               <button className='edit'>Edit</button>
-              <button className='remove'>Remove</button>
+              <button 
+                className='remove' id={application.id} 
+                data-id={experience.id} onClick={deleteWork}>Remove</button>
 
               <DetailsList details={experience.workDetails} />
             </div> 

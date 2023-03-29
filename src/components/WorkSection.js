@@ -37,7 +37,9 @@ class WorkSection extends Component {
           application={application} hidePopUp={this.hidePopUp}
           addWork={addWork} addWorkInfo={addWorkInfo} /> : null}
         <button className='add-work-exp' onClick={this.showPopUp}>Add</button>
-        <WorkExpList experiences={application.workExperience.experiences} />
+        <WorkExpList 
+          application={application}
+          deleteWork={deleteWork} />
       </div>
     )
   }
