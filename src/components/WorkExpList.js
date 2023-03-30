@@ -9,7 +9,8 @@ class WorkExpList extends Component {
     this.state = {
       editMode: false,
       workEdited: null,
-      popUpVisible: false
+      popUpVisible: false,
+      workIdForDetail: null
     }
 
     this.toggleEditMode = this.toggleEditMode.bind(this);
@@ -17,6 +18,8 @@ class WorkExpList extends Component {
     this.handleEditClick = this.handleEditClick.bind(this);
     this.showPopUp = this.showPopUp.bind(this);
     this.hidePopUp = this.hidePopUp.bind(this);
+    this.setWorkIdForDetail = this.setWorkIdForDetail.bind(this);
+    this.handleAddDetailClick = this.handleAddDetailClick.bind(this);
   }
 
   toggleEditMode() {
@@ -35,10 +38,20 @@ class WorkExpList extends Component {
     this.setEditedWork(e);
   }
 
+  setWorkIdForDetail(e) {
+    const workIdForDetail = e.target.dataset.id;
+    this.setState({workIdForDetail: workIdForDetail});
+  }
+
   showPopUp() {
     this.setState({
       popUpVisible: true,
     });
+  }
+
+  handleAddDetailClick(e) {
+    this.setWorkIdForDetail(e);
+    this.showPopUp();
   }
 
   hidePopUp() {
@@ -92,16 +105,18 @@ class WorkExpList extends Component {
                 className='remove' id={application.id} 
                 data-id={experience.id} onClick={deleteWork}>Remove</button>
 
-              {this.state.popUpVisible ?
+              {(this.state.popUpVisible && 
+                this.state.workIdForDetail === experience.id) ?
               <AddDetailPopUp 
               hidePopUp={this.hidePopUp} detailAdd={detailAdd}
               application={application} experience={experience} 
               addDetailInfo={addDetailInfo}/> : null}
 
-              {this.state.popUpVisible ? null:
+              {(this.state.popUpVisible && 
+                this.state.workIdForDetail === experience.id) ? null:
                 <button
-                className='add-detail' 
-                onClick={this.showPopUp}>Add Detail</button>
+                className='add-detail' data-id={experience.id}
+                onClick={this.handleAddDetailClick}>Add Detail</button>
               }
 
               <DetailsList application={application} experience={experience} />
