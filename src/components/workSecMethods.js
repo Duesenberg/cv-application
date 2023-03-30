@@ -105,4 +105,41 @@ function editWork(e) {
   this.setState({applications: applications});
 }
 
-export { addWorkInfo, addWork, deleteWork, editWork };
+function detailAdd(e) {
+  e.preventDefault();
+
+  const appIndex = this.state.applications.findIndex((application) => {
+    return application.id === e.target.dataset.apid;
+  });
+  const application = Object.assign({}, this.state.applications[appIndex]);
+  const applications = Object.assign([], this.state.applications);
+  const workIndex = application.workExperience.experiences.findIndex((experience) => {
+    return experience.id === e.target.dataset.expid;
+  });
+
+  const detail = application.workExperience.experience.workDetail;
+  application.workExperience.experiences[workIndex].workDetails.push(detail);
+  application.workExperience.experience.workDetail = {
+    description: '',
+    id: uniqid()
+  }
+
+  applications[appIndex] = application;
+  this.setState({applications: applications});
+}
+
+function addDetailInfo(e) {
+  const index = this.state.applications.findIndex((application) => {
+    return application.id === e.target.dataset.id;
+  });
+  const application = Object.assign({}, this.state.applications[index]);
+  const applications = Object.assign([], this.state.applications);
+  let detail = application.workExperience.experience.workDetail.description;
+
+  detail = e.target.value;
+  applications[index].workExperience.experience.workDetail.description = detail;
+
+  this.setState({applications: applications});
+}
+
+export { addWorkInfo, addWork, deleteWork, editWork, detailAdd, addDetailInfo };

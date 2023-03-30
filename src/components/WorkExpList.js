@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DetailsList from './DetailsList';
+import AddDetailPopUp from './AddDetailPopUp';
 
 class WorkExpList extends Component {
   constructor(props) {
@@ -7,12 +8,15 @@ class WorkExpList extends Component {
 
     this.state = {
       editMode: false,
-      workEdited: null
+      workEdited: null,
+      popUpVisible: false
     }
 
     this.toggleEditMode = this.toggleEditMode.bind(this);
     this.setEditedWork = this.setEditedWork.bind(this);
     this.handleEditClick = this.handleEditClick.bind(this);
+    this.showPopUp = this.showPopUp.bind(this);
+    this.hidePopUp = this.hidePopUp.bind(this);
   }
 
   toggleEditMode() {
@@ -31,8 +35,21 @@ class WorkExpList extends Component {
     this.setEditedWork(e);
   }
 
+  showPopUp() {
+    this.setState({
+      popUpVisible: true,
+    });
+  }
+
+  hidePopUp() {
+    this.setState({
+      popUpVisible: false,
+    })
+  }
+
   render() {
-    const { application, deleteWork, editWork } = this.props;
+    const { application, deleteWork, editWork, detailAdd, 
+      addDetailInfo } = this.props;
 
     return (
       <div className='experiences'>
@@ -62,18 +79,32 @@ class WorkExpList extends Component {
                 </div> :
                 <div 
                   className='position'>
-                    {experience.company + ', ' + experience.position + 
-                    '(' + experience.startYear + ' - ' + experience.endYear + ')'}
+                  {experience.company + ', ' + experience.position + 
+                  '(' + experience.startYear + ' - ' + experience.endYear + ')'}
                 </div>
               }
+
               <button 
                 className='edit' data-id={experience.id}
                 onClick={this.handleEditClick}>Edit</button>
+
               <button 
                 className='remove' id={application.id} 
                 data-id={experience.id} onClick={deleteWork}>Remove</button>
 
-              <DetailsList details={experience.workDetails} />
+              {this.state.popUpVisible ?
+              <AddDetailPopUp 
+              hidePopUp={this.hidePopUp} detailAdd={detailAdd}
+              application={application} experience={experience} 
+              addDetailInfo={addDetailInfo}/> : null}
+
+              {this.state.popUpVisible ? null:
+                <button
+                className='add-detail' 
+                onClick={this.showPopUp}>Add Detail</button>
+              }
+
+              <DetailsList application={application} experience={experience} />
             </div> 
           )
         })}
