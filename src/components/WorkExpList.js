@@ -76,19 +76,23 @@ class WorkExpList extends Component {
                   <input 
                     type='text' name='company' id='company' 
                     onChange={editWork} data-apid={application.id} 
-                    data-expid={experience.id} required />, 
+                    data-expid={experience.id} 
+                    placeholder={experience.company} required />, 
                   <input 
                     type='text' name='position' id='position' 
                     onChange={editWork} data-apid={application.id} 
-                    data-expid={experience.id} required />,  
+                    data-expid={experience.id}
+                    placeholder={experience.position} required />,  
                   <input 
                     type='date' name='startYear' id='startYear' 
                     onChange={editWork} data-apid={application.id} 
-                    data-expid={experience.id} required />-
+                    data-expid={experience.id}
+                    placeholder={experience.startYear} required />-
                   <input 
                     type='date' name='endYear' id='endYear' 
                     onChange={editWork} data-apid={application.id} 
-                    data-expid={experience.id} required />
+                    data-expid={experience.id}
+                    placeholder={experience.endYear} required />
                 </div> :
                 <div 
                   className='position'>

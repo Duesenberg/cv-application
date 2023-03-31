@@ -45,19 +45,23 @@ class DegreeList extends Component {
                   <input 
                     type='text' name='fullName' id='fullName' 
                     onChange={editDegree} data-apid={application.id} 
-                    data-degid={degree.id} required />, 
+                    data-degid={degree.id}
+                    placeholder={degree.name} required />, 
                   <input 
                     type='text' name='institution' id='institution' 
                     onChange={editDegree} data-apid={application.id} 
-                    data-degid={degree.id} required />, 
+                    data-degid={degree.id}
+                    placeholder={degree.institution} required />, 
                   <input 
                     type='date' name='startYear' id='startYear' 
                     onChange={editDegree} data-apid={application.id} 
-                    data-degid={degree.id} required />-
+                    data-degid={degree.id}
+                    placeholder={degree.startYear} required />-
                   <input 
                     type='date' name='endYear' id='endYear' 
                     onChange={editDegree} data-apid={application.id} 
-                    data-degid={degree.id} required />
+                    data-degid={degree.id}
+                    placeholder={degree.endYear} required />
                 </div> :
                 <p className='text'>
                   {degree.name + ', ' + degree.institution + ', ' 
