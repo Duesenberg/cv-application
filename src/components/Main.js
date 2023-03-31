@@ -41,7 +41,9 @@ class Main extends Component {
                     editWork={editWork} detailAdd={detailAdd}
                     addDetailInfo={addDetailInfo} detailEdit={detailEdit}
                     deleteDetail={deleteDetail} />
-                  <SkillSection skills={application.skills} />
+                  <SkillSection 
+                    application={application}
+                    skills={application.skills} />
                   <ProjectsSection projects={application.projects} />
                   <LeadershipSection leadership={application.leadership} />
                   <AchievementSection achievements={application.achievements} />
