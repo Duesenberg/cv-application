@@ -62,7 +62,7 @@ class WorkExpList extends Component {
 
   render() {
     const { application, deleteWork, editWork, detailAdd, 
-      addDetailInfo } = this.props;
+      addDetailInfo, detailEdit, deleteDetail } = this.props;
 
     return (
       <div className='experiences'>
@@ -119,7 +119,9 @@ class WorkExpList extends Component {
                 onClick={this.handleAddDetailClick}>Add Detail</button>
               }
 
-              <DetailsList application={application} experience={experience} />
+              <DetailsList 
+                application={application} experience={experience}
+                detailEdit={detailEdit} deleteDetail={deleteDetail} />
             </div> 
           )
         })}

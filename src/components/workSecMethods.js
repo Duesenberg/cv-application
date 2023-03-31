@@ -74,7 +74,7 @@ function deleteWork (e) {
 }
 
 //edit an existing work item
-function editWork(e) {
+function editWork (e) {
   const appIndex = this.state.applications.findIndex((application) => {
     return application.id === e.target.dataset.apid;
   });
@@ -105,7 +105,7 @@ function editWork(e) {
   this.setState({applications: applications});
 }
 
-function detailAdd(e) {
+function detailAdd (e) {
   e.preventDefault();
 
   const appIndex = this.state.applications.findIndex((application) => {
@@ -128,7 +128,7 @@ function detailAdd(e) {
   this.setState({applications: applications});
 }
 
-function addDetailInfo(e) {
+function addDetailInfo (e) {
   const index = this.state.applications.findIndex((application) => {
     return application.id === e.target.dataset.id;
   });
@@ -142,4 +142,48 @@ function addDetailInfo(e) {
   this.setState({applications: applications});
 }
 
-export { addWorkInfo, addWork, deleteWork, editWork, detailAdd, addDetailInfo };
+function detailEdit (e) {
+  const appIndex = this.state.applications.findIndex((application) => {
+    return application.id === e.target.dataset.apid;
+  });
+  const application = Object.assign({}, this.state.applications[appIndex]);
+  const applications = Object.assign([], this.state.applications);
+  const workIndex = application.workExperience.experiences.findIndex((experience) => {
+    return experience.id === e.target.dataset.expid;
+  });
+  const detailIndex = 
+    application.workExperience.experiences[workIndex]
+    .workDetails.findIndex((detail) => {
+      return detail.id === e.target.dataset.detid;
+    });
+
+  application.workExperience.experiences[workIndex]
+    .workDetails[detailIndex].description = e.target.value;
+  applications[appIndex] = application;
+
+  this.setState({applications: applications});
+}
+
+function deleteDetail (e) {
+  const appIndex = this.state.applications.findIndex((application) => {
+    return application.id === e.target.dataset.apid;
+  });
+  const application = Object.assign({}, this.state.applications[appIndex]);
+  const applications = Object.assign([], this.state.applications);
+  const workIndex = application.workExperience.experiences.findIndex((experience) => {
+    return experience.id === e.target.dataset.expid;
+  });
+
+  let details = application.workExperience.experiences[workIndex].workDetails;
+  details = details.filter((detail) => {
+    if (detail.id === e.target.dataset.detid) return null;
+    else return detail;
+  });
+
+  application.workExperience.experiences[workIndex].workDetails = details;
+  applications[appIndex] = application;
+  this.setState({applications: applications});
+}
+
+export { addWorkInfo, addWork, deleteWork, editWork, detailAdd, 
+    addDetailInfo, detailEdit, deleteDetail };
