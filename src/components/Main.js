@@ -16,7 +16,8 @@ class Main extends Component {
     const { applications, state, editCVTitle, editPersonalInfo,
       addDegree, editDegree, addDegreeInfo, deleteDegree, addWork, 
       addWorkInfo, deleteWork, editWork, detailAdd, 
-      addDetailInfo, detailEdit, deleteDetail } = this.props;
+      addDetailInfo, detailEdit, deleteDetail, addSkill, 
+      addSkillInfo, editSkill, deleteSkill } = this.props;
 
     return (
       <div className="main">
@@ -42,8 +43,9 @@ class Main extends Component {
                     addDetailInfo={addDetailInfo} detailEdit={detailEdit}
                     deleteDetail={deleteDetail} />
                   <SkillSection 
-                    application={application}
-                    skills={application.skills} />
+                    application={application} addSkill={addSkill} 
+                    addSkillInfo={addSkillInfo} editSkill={editSkill}
+                    deleteSkill={deleteSkill} />
                   <ProjectsSection projects={application.projects} />
                   <LeadershipSection leadership={application.leadership} />
                   <AchievementSection achievements={application.achievements} />

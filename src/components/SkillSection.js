@@ -27,20 +27,24 @@ class SkillSection extends Component {
   }
 
   render() {
-    const { application, skills } = this.props;
+    const { application, addSkill, addSkillInfo, editSkill,
+      deleteSkill } = this.props;
 
     return (
       <div className='skill-section'>
         <p className='name'>Skills</p>
         {this.state.popUpVisible ?
         <AddSkillPopUp 
-        application={application} hidePopUp={this.hidePopUp} /> :null}
+        application={application} hidePopUp={this.hidePopUp}
+        addSkill={addSkill} addSkillInfo={addSkillInfo} /> :null}
 
         {this.state.popUpVisible ? null:
         <button 
           className='add-skill' onClick={this.showPopUp}>Add Skill</button>}
 
-        <SkillsList application={application} skills={skills} />
+        <SkillsList 
+          application={application} editSkill={editSkill}
+          deleteSkill={deleteSkill} />
       </div>
     )
   }

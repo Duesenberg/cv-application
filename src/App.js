@@ -14,6 +14,8 @@ import { addDegree, editDegree, addDegreeInfo,
 import { addWork, addWorkInfo, deleteWork, editWork, 
     detailAdd, addDetailInfo, 
     detailEdit, deleteDetail } from './components/workSecMethods';
+import { addSkill, addSkillInfo, 
+  editSkill, deleteSkill } from './components/skillSecMethods';
 
 class App extends Component {
   constructor() {
@@ -106,6 +108,10 @@ class App extends Component {
     this.addDetailInfo = addDetailInfo.bind(this);
     this.detailEdit = detailEdit.bind(this);
     this.deleteDetail = deleteDetail.bind(this);
+    this.addSkill = addSkill.bind(this);
+    this.addSkillInfo = addSkillInfo.bind(this);
+    this.editSkill = editSkill.bind(this);
+    this.deleteSkill = deleteSkill.bind(this);
   }
   
   render() {
@@ -129,6 +135,8 @@ class App extends Component {
           deleteWork={this.deleteWork} editWork={this.editWork} 
           detailAdd={this.detailAdd} addDetailInfo={this.addDetailInfo}
           detailEdit={this.detailEdit} deleteDetail={this.deleteDetail}
+          addSkill={this.addSkill} addSkillInfo={this.addSkillInfo}
+          editSkill={this.editSkill} deleteSkill={this.deleteSkill}
        />
       </div>
     );
