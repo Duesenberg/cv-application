@@ -17,7 +17,8 @@ class Main extends Component {
       addDegree, editDegree, addDegreeInfo, deleteDegree, addWork, 
       addWorkInfo, deleteWork, editWork, detailAdd, 
       addDetailInfo, detailEdit, deleteDetail, addSkill, 
-      addSkillInfo, editSkill, deleteSkill } = this.props;
+      addSkillInfo, editSkill, deleteSkill, addProject, 
+      addProjectInfo, editProject, deleteProject } = this.props;
 
     return (
       <div className="main">
@@ -46,7 +47,10 @@ class Main extends Component {
                     application={application} addSkill={addSkill} 
                     addSkillInfo={addSkillInfo} editSkill={editSkill}
                     deleteSkill={deleteSkill} />
-                  <ProjectsSection projects={application.projects} />
+                  <ProjectsSection 
+                    application={application} addProject={addProject} 
+                    addProjectInfo={addProjectInfo} editProject={editProject}
+                    deleteProject={deleteProject} />
                   <LeadershipSection leadership={application.leadership} />
                   <AchievementSection achievements={application.achievements} />
               </div>

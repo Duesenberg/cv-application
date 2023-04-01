@@ -16,6 +16,8 @@ import { addWork, addWorkInfo, deleteWork, editWork,
     detailEdit, deleteDetail } from './components/workSecMethods';
 import { addSkill, addSkillInfo, 
   editSkill, deleteSkill } from './components/skillSecMethods';
+import { addProject, addProjectInfo, editProject, 
+  deleteProject } from './components/projSectionMethods';
 
 class App extends Component {
   constructor() {
@@ -112,6 +114,10 @@ class App extends Component {
     this.addSkillInfo = addSkillInfo.bind(this);
     this.editSkill = editSkill.bind(this);
     this.deleteSkill = deleteSkill.bind(this);
+    this.addProject = addProject.bind(this);
+    this.addProjectInfo = addProjectInfo.bind(this);
+    this.editProject = editProject.bind(this);
+    this.deleteProject = deleteProject.bind(this);
   }
   
   render() {
@@ -137,6 +143,8 @@ class App extends Component {
           detailEdit={this.detailEdit} deleteDetail={this.deleteDetail}
           addSkill={this.addSkill} addSkillInfo={this.addSkillInfo}
           editSkill={this.editSkill} deleteSkill={this.deleteSkill}
+          addProject={this.addProject} addProjectInfo={this.addProjectInfo}
+          editProject={this.editProject} deleteProject={this.deleteProject}
        />
       </div>
     );
