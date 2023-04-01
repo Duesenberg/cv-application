@@ -7,8 +7,6 @@ import EduSection from './EduSection';
 import WorkSection from './WorkSection';
 import SkillSection from './SkillSection';
 import ProjectsSection from './ProjectsSection';
-import LeadershipSection from './LeadershipSection';
-import AchievementSection from './AchievementSection';
 import '../styles/Main.css';
 
 class Main extends Component {
@@ -51,8 +49,6 @@ class Main extends Component {
                     application={application} addProject={addProject} 
                     addProjectInfo={addProjectInfo} editProject={editProject}
                     deleteProject={deleteProject} />
-                  <LeadershipSection leadership={application.leadership} />
-                  <AchievementSection achievements={application.achievements} />
               </div>
             )
           }

@@ -51,20 +51,6 @@ function addTitle(e) {
           id: this.state.application.projects.project.id
         },
         projects: []
-      },
-      leadership: {
-        role: {
-          description: '',
-          id: this.state.application.leadership.role.id
-        },
-        roles: []
-      },
-      achievements: {
-        item: {
-          description: '',
-          id: this.state.application.achievements.item.id
-        },
-        list: []
       }
     }
   });
@@ -123,20 +109,6 @@ function addCV(e) {
           id: uniqid()
         },
         projects: []
-      },
-      leadership: {
-        role: {
-          description: '',
-          id: uniqid()
-        },
-        roles: []
-      },
-      achievements: {
-        item: {
-          description: '',
-          id: uniqid()
-        },
-        list: []
       }
     }
   });

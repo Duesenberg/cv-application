@@ -72,20 +72,6 @@ class App extends Component {
             id: uniqid()
           },
           projects: []
-        },
-        leadership: {
-          role: {
-            description: '',
-            id: uniqid()
-          },
-          roles: []
-        },
-        achievements: {
-          item: {
-            description: '',
-            id: uniqid()
-          },
-          list: []
         }
       },
       applications: [],
