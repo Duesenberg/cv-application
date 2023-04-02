@@ -1,4 +1,23 @@
+@font-face {
+  font-family: 'Audiowide';
+  src: url(./fonts/Audiowide-Regular.ttf);
+}
+
 .header {
 	grid-area: 1 / 1 / 2 / 3;
-	background-color: red;
+	background-color: #C0354A;
+  box-shadow: 0px 0px 15px black;
+  position: sticky;
+  z-index: 2;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: start;
+  padding-left: 20px;
+}
+
+.header h1 {
+  font-family: 'Audiowide';
+  font-size: 2.5rem;
+  color: white;
 }

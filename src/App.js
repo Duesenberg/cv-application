@@ -5,19 +5,20 @@ import uniqid from "uniqid";
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
-import './styles/App.css';
 import { addCV, addTitle, deleteApplication, selectCV } from './appMethods';
 import editCVTitle from './components/titleSecMethods';
 import { editPersonalInfo } from './components/persInfoSecMethods';
 import { addDegree, editDegree, addDegreeInfo,
   deleteDegree } from './components/eduSecMethods';
 import { addWork, addWorkInfo, deleteWork, editWork, 
-    detailAdd, addDetailInfo, 
-    detailEdit, deleteDetail } from './components/workSecMethods';
+  detailAdd, addDetailInfo, 
+  detailEdit, deleteDetail } from './components/workSecMethods';
 import { addSkill, addSkillInfo, 
   editSkill, deleteSkill } from './components/skillSecMethods';
 import { addProject, addProjectInfo, editProject, 
   deleteProject } from './components/projSectionMethods';
+import './styles/App.css';
+import './styles/Header.css';
 
 class App extends Component {
   constructor() {
