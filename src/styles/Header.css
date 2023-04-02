@@ -3,6 +3,14 @@
   src: url(./fonts/Audiowide-Regular.ttf);
 }
 
+@keyframes shake {
+  0% {transform: scale(1);}
+  25% {transform: scale(1.1);}
+  50% {transform: scale(.9);}
+  75% {transform: scale(1);}
+  100% {transform: scale(1);}
+}
+
 .header {
 	grid-area: 1 / 1 / 2 / 3;
 	background-color: #C0354A;
@@ -10,10 +18,23 @@
   position: sticky;
   z-index: 2;
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
   justify-content: start;
-  padding-left: 20px;
+  padding-left: 40px;
+}
+
+.header a {
+  width: 75px;
+  height: 75px;
+  background-image: url(./icons/github-alt.svg);
+  filter: invert(100%) sepia(0%) saturate(1%) hue-rotate(90deg) brightness(101%) contrast(101%);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header a:hover {
+  animation: shake 500ms;
 }
 
 .header h1 {

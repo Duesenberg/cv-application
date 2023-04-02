@@ -9,7 +9,9 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <a href="https://github.com/Duesenberg" className="github-link" />
+        <a 
+          href="https://github.com/Duesenberg" className="github-link" 
+          target="_blank" rel='noreferrer' />
         <h1 className="title">CV Application Generator</h1>
       </div>
     );
