@@ -12,8 +12,8 @@ class AddCVPopUp extends Component {
     return (
       <form className='pop-up' onSubmit={this.handleSubmit}>
         <input type='text' name='title' id='title' onChange={titleAdd} required />
-        <button className='create-application' type='submit'>Add</button>
-        <button className='hide-popup' onClick={hidePopUp}>Hide</button>
+        <button className='create-application' type='submit'>ADD</button>
+        <button className='hide-popup' onClick={hidePopUp}>CANCEL</button>
       </form>
     );
   }

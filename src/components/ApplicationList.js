@@ -6,6 +6,7 @@ class ApplicationList extends Component {
 
     return(
       <div className='application-list'>
+        <p className='list-title'>Applications:</p>
         {applications.map((application) => {
           return (
             <div 
@@ -18,7 +19,7 @@ class ApplicationList extends Component {
                 <button 
                   className='remove-button'
                   id={application.id}
-                  onClick={deleteApplication}>Remove</button>
+                  onClick={deleteApplication}>X</button>
             </div>
           );
         })}

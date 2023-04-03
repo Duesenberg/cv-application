@@ -36,7 +36,7 @@ class Sidebar extends Component {
 
     return (
       <div className="sidebar">
-        <button className='add-application' onClick={this.showPopUp}>Add</button>
+        <button className='add-application' onClick={this.showPopUp}>CREATE NEW</button>
         {this.state.popUpVisible ? 
           <AddCVPopUp 
             hidePopUp={this.hidePopUp}
