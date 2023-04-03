@@ -28,6 +28,8 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  z-index: 1;
+  box-shadow: 0px 0px 15px black;
 }
 
 .sidebar .add-application {
@@ -157,7 +159,3 @@
 .sidebar .application .title:hover {
   animation: bounce-right 150ms;
 }
-
-/* ##C0354A cardinal
-#2F3734 onyx
-#E0E2DB alabaster */

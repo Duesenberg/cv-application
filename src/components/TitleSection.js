@@ -22,7 +22,7 @@ class TitleSection extends Component {
     
     return (
       <div className='title-section'> 
-        <p className='name'>CV Title</p> :
+        <p className='name'>CV Title</p>
         { this.state.editMode === false ?
           <p className='content'>{application.title}</p> :
           <input

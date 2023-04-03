@@ -1,4 +1,93 @@
+@font-face {
+  font-family: 'Inter';
+  src: url(./fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+  font-family: 'Audiowide';
+  src: url(./fonts/Audiowide-Regular.ttf);
+}
+
 .main {
 	grid-area: 2 / 2 / 3 / 3;
-	background-color: green;
+	background-color: #E0E2DB;
+  padding: 15px 30px;
 }
+
+.title-section {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.title-section .name {
+  grid-area: 1 / 1 / 2 / 3;
+  font-family: 'Audiowide';
+  color: #2F3734 ;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.title-section .content {
+  padding: 8px 12px;
+  width: 250px;
+  font-family: 'Inter';
+  font-size: 1.75rem;
+  color: #2F3734;
+  font-weight: 700;
+  margin: 0;
+  align-self: center;
+}
+
+.title-section button.edit {
+  grid-area: 1 / 2 / 3 / 3;
+  padding: 5px 12px;
+  font-family: 'Inter';
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #E0E2DB;
+  align-self: center;
+  background-color: #2F3734;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  justify-self: start;
+}
+.title-section button.edit:hover {
+  background-color: #E0E2DB;
+  color: #2F3734;
+  border: 3px solid #2F3734;
+  transition: 300ms;
+}
+.title-section button.edit:active {
+  background-color: #2F3734;
+  color: #E0E2DB;
+  border: 3px solid transparent;
+  transition: 150ms;
+}
+
+.title-section input {
+  width: 250px;
+  align-self: center;
+  font-family: 'Inter';
+  font-size: 1.75rem;
+  font-weight: 700;
+  border: none;
+  background-color: #E0E2DB;
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+.title-section input:focus {
+  outline: none;
+  background-color: white;
+  transition: 150ms;
+}
+.title-section input:hover {
+  background-color: white;
+  transition: 300ms;
+}
+
+
+
+/* ##C0354A cardinal
+#2F3734 onyx
+#E0E2DB alabaster */
