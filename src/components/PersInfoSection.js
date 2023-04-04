@@ -21,7 +21,7 @@ class PersInfoSection extends Component {
 
     return (
       <div className='personal-info-section'>
-        <p className='name'>Personal Information</p>
+        <p className='pers-info-name'>Personal Information</p>
 
         <div className='full-name'>
           <p className='name'>Full Name</p>

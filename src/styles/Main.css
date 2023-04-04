@@ -14,6 +14,8 @@
   padding: 15px 30px;
 }
 
+/* title section */
+
 .title-section {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -86,7 +88,85 @@
   transition: 300ms;
 }
 
+/* personal info section */
 
+.pers-info-name {
+  padding: 20px 0 10px 0;
+  font-family: 'Audiowide';
+  color: #2F3734 ;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.full-name, .living-address, .phone-number, .email, .date-of-birth {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  padding-left: 12px;
+}
+
+.full-name .name, .living-address .name, .phone-number .name, .email .name, 
+.date-of-birth .name  {
+  padding-top: 15px;
+  grid-area: 1 / 1 / 2 / 3;
+  font-family: 'Inter';
+  color: #2F3734 ;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.full-name .content, .living-address .content, .phone-number .content, 
+.phone-number .content, .email .content, .date-of-birth .content {
+  padding: 8px 12px;
+  width: 450px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  color: #2F3734;
+  margin: 0;
+  align-self: center;
+}
+
+.full-name .edit, .living-address .edit, .phone-number .edit, .email .edit, 
+.date-of-birth .edit {
+  padding: 2px 6px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  color: #E0E2DB;
+  align-self: center;
+  background-color: #2F3734;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  justify-self: start;
+}
+.full-name button.edit:hover, .living-address button.edit:hover, 
+.phone-number button.edit:hover, .email button.edit:hover, 
+.date-of-birth button.edit:hover {
+  background-color: #E0E2DB;
+  color: #2F3734;
+  border: 3px solid #2F3734;
+  transition: 300ms;
+}
+.full-name button.edit:active, .living-address button.edit:active, 
+.phone-number button.edit:active, .email button.edit:active, 
+.date-of-birth button.edit:active {
+  background-color: #2F3734;
+  color: #E0E2DB;
+  border: 3px solid transparent;
+  transition: 150ms;
+}
+
+.full-name input, .living-address input, .phone-number input, .email input, 
+.date-of-birth input {
+  width: 450px;
+  align-self: center;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  border: none;
+  background-color: white;
+  border-radius: 3px;
+  padding: 8px 12px;
+}
 
 /* ##C0354A cardinal
 #2F3734 onyx
