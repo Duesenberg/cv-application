@@ -19,10 +19,10 @@ class AddDegreePopUp extends Component {
           data-id={application.id} placeholder='Institution' required />
         <input 
           type='date' name='startYear' id='startYear' onChange={addDegreeInfo} 
-          data-id={application.id} title='Year started' required />
+          data-id={application.id} title='Date started' required />
         <input 
           type='date' name='endYear' id='endYear' onChange={addDegreeInfo} 
-          data-id={application.id} title='Year finished' required />
+          data-id={application.id} title='Date finished' required />
         <button className='add-button' type='submit'>Add</button>
         <button className='close-button' onClick={hidePopUp}>Close</button>
       </form>

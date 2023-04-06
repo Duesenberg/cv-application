@@ -13,16 +13,16 @@ class AddWorkPopUp extends Component {
       <form className='add-experience' data-id={application.id} onSubmit={this.handleSubmit}>
         <input 
           type='text' name='company' id='company' onChange={addWorkInfo}
-          data-id={application.id} required />, 
+          data-id={application.id} placeholder='Company' required />
         <input 
           type='text' name='position' id='position' onChange={addWorkInfo} 
-          data-id={application.id} required />,  
+          data-id={application.id} placeholder='Position' required /> 
         <input 
           type='date' name='startYear' id='startYear' onChange={addWorkInfo} 
-          data-id={application.id} required />-
+          data-id={application.id} title='Date started' required />
         <input 
           type='date' name='endYear' id='endYear' onChange={addWorkInfo} 
-          data-id={application.id} required />
+          data-id={application.id} title='Date left' required />
         <button className='add-button' type='submit'>Add</button>
         <button className='close-button' onClick={hidePopUp}>Close</button>
       </form>

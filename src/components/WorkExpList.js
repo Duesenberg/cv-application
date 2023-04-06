@@ -77,37 +77,45 @@ class WorkExpList extends Component {
                     type='text' name='company' id='company' 
                     onChange={editWork} data-apid={application.id} 
                     data-expid={experience.id} 
-                    placeholder={experience.company} required />, 
+                    placeholder={experience.company} required />
                   <input 
                     type='text' name='position' id='position' 
                     onChange={editWork} data-apid={application.id} 
                     data-expid={experience.id}
-                    placeholder={experience.position} required />,  
+                    placeholder={experience.position} required />
                   <input 
                     type='date' name='startYear' id='startYear' 
                     onChange={editWork} data-apid={application.id} 
                     data-expid={experience.id}
-                    placeholder={experience.startYear} required />-
+                    placeholder={experience.startYear} required />
                   <input 
                     type='date' name='endYear' id='endYear' 
                     onChange={editWork} data-apid={application.id} 
                     data-expid={experience.id}
                     placeholder={experience.endYear} required />
+
+                  <button 
+                    className='edit' data-id={experience.id}
+                    onClick={this.handleEditClick}>Edit</button>
+                  <button 
+                    className='remove' id={application.id} 
+                    data-id={experience.id} onClick={deleteWork}>Remove</button>
                 </div> :
-                <div 
-                  className='position'>
-                  {experience.company + ', ' + experience.position + 
-                  '(' + experience.startYear + ' - ' + experience.endYear + ')'}
+                <div className='position-box'>
+                  <div className='position'>
+                    {experience.company + ', ' + experience.position + 
+                    '(' + experience.startYear + ' - ' + experience.endYear + ')'}
+                  </div>
+                  <div className='buttons'>
+                    <button 
+                      className='edit' data-id={experience.id}
+                      onClick={this.handleEditClick}>Edit</button>
+                    <button 
+                      className='remove' id={application.id} 
+                      data-id={experience.id} onClick={deleteWork}>Remove</button>
+                    </div>
                 </div>
               }
-
-              <button 
-                className='edit' data-id={experience.id}
-                onClick={this.handleEditClick}>Edit</button>
-
-              <button 
-                className='remove' id={application.id} 
-                data-id={experience.id} onClick={deleteWork}>Remove</button>
 
               {(this.state.popUpVisible && 
                 this.state.workIdForDetail === experience.id) ?
@@ -120,7 +128,7 @@ class WorkExpList extends Component {
                 this.state.workIdForDetail === experience.id) ? null:
                 <button
                 className='add-detail' data-id={experience.id}
-                onClick={this.handleAddDetailClick}>Add Detail</button>
+                onClick={this.handleAddDetailClick}>Add Work Detail</button>
               }
 
               <DetailsList 

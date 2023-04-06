@@ -88,7 +88,7 @@
   transition: 300ms;
 }
 
-/* personal info section */
+/* ----------------------------------------- personal info section */
 
 .pers-info-name {
   padding: 20px 0 10px 0;
@@ -168,7 +168,7 @@
   padding: 8px 12px;
 }
 
-/* edu section */
+/* -------------------------------------------------- edu section */
 
 .education-section {
   display: grid;
@@ -210,6 +210,8 @@
   border: 3px solid transparent;
   transition: 150ms;
 }
+
+/* popup */
 
 .degree-popup {
   grid-area: 2 / 1 / 3 / 3;
@@ -267,6 +269,8 @@
   transition: 150ms;
 }
 
+/* degree list */
+
 .education-section .degrees {
   grid-column: 1 / 3;
 }
@@ -280,6 +284,7 @@
 }
 
 .education-section .degree .text {
+  width: 688px;
   padding: 8px 12px;
   font-family: 'Inter';
   font-size: 1.25rem;
@@ -308,6 +313,306 @@
   border: 3px solid transparent;
   transition: 150ms;
 }
+
+.degree .buttons {
+  display: flex;
+  gap: 3px;
+}
+
+/* degree edit box */
+
+.degree .edit-box {
+  grid-area: 2 / 1 / 3 / 3;
+  display: grid;
+  grid-template-columns: repeat(4, 214px) ;
+  gap: 3px;
+}
+.degree .edit-box button.edit {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.degree .edit-box button.remove {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.degree .edit-box #fullName, .degree .edit-box #institution,
+.degree .edit-box #startYear, .degree .edit-box #endYear {
+  align-self: center;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  border: none;
+  background-color: white;
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+.degree .edit-box #fullName, .degree .edit-box #institution {
+  width: 366;
+}
+.degree .edit-box #fullName {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.degree .edit-box #institution {
+  grid-area: 1 / 3 / 2 / 5;
+}
+.degree .edit-box #startYear, .degree .edit-box #endYear {
+  width: 183px;
+}
+.degree .edit-box button.edit, .degree .edit-box button.remove {
+  padding: 2px 6px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  color: #E0E2DB;
+  background-color: #2F3734;
+  border: 3px solid transparent;
+  border-radius: 3px;
+}
+.degree .edit-box button.edit:hover, .degree .edit-box button.remove:hover {
+  background-color: #E0E2DB;
+  color: #2F3734;
+  border: 3px solid #2F3734;
+  transition: 300ms;
+}
+.degree .edit-box button.edit:active, .degree .edit-box button.remove:active {
+  background-color: #2F3734;
+  color: #E0E2DB;
+  border: 3px solid transparent;
+  transition: 150ms;
+}
+
+/* ------------------------------------------- work section */
+
+.work-exp-section {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+}
+
+.work-exp-section .name {
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 20px 0 10px 0;
+  font-family: 'Audiowide';
+  color: #2F3734 ;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.work-exp-section button.add-work-exp {
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 5px 12px;
+  font-family: 'Inter';
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #E0E2DB;
+  align-self: center;
+  background-color: #2F3734;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  justify-self: start;
+}
+.work-exp-section button.add-work-exp:hover {
+  background-color: #E0E2DB;
+  color: #2F3734;
+  border: 3px solid #2F3734;
+  transition: 300ms;
+}
+.work-exp-section button.add-work-exp:active {
+  background-color: #2F3734;
+  color: #E0E2DB;
+  border: 3px solid transparent;
+  transition: 150ms;
+}
+
+/* popup */
+
+.add-experience {
+  grid-area: 2 / 1 / 3 / 3;
+  display: grid;
+  grid-template-columns: repeat(4, 214px) ;
+  gap: 3px;
+}
+.add-experience .add-button {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.add-experience .close-button {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.add-experience #company, .add-experience #position,
+.add-experience #startYear, .add-experience #endYear {
+  align-self: center;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  border: none;
+  background-color: white;
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+.add-experience #company, .add-experience #position {
+  width: 366;
+}
+.add-experience #company {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.add-experience #position {
+  grid-area: 1 / 3 / 2 / 5;
+}
+.add-experience #startYear, .add-experience #endYear {
+  width: 183px;
+}
+.add-experience .add-button, .add-experience .close-button {
+  padding: 2px 6px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  color: #E0E2DB;
+  background-color: #2F3734;
+  border: 3px solid transparent;
+  border-radius: 3px;
+}
+.add-experience .add-button:hover, .add-experience .close-button:hover {
+  background-color: #E0E2DB;
+  color: #2F3734;
+  border: 3px solid #2F3734;
+  transition: 300ms;
+}
+.add-experience .add-button:active, .add-experience .close-button:active {
+  background-color: #2F3734;
+  color: #E0E2DB;
+  border: 3px solid transparent;
+  transition: 150ms;
+}
+
+/* work exp list */
+
+.work-exp-section .experiences {
+  grid-column: 1 / 3;
+}
+
+.work-exp-section .experience {
+  padding-top: 15px;
+  width: 864px;
+}
+
+.work-exp-section .experience .position-box {
+  display: grid;
+  grid-template-columns: 712px 1fr;
+  align-items: center;
+}
+
+.work-exp-section .experience .position {
+  width: 688px;
+  padding: 8px 12px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  color: #2F3734;
+  margin: 0;
+  align-self: center;
+}
+.work-exp-section .experience button {
+  padding: 2px 6px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  color: #E0E2DB;
+  background-color: #2F3734;
+  border: 3px solid transparent;
+  border-radius: 3px;
+}
+.work-exp-section .experience button:hover {
+  background-color: #E0E2DB;
+  color: #2F3734;
+  border: 3px solid #2F3734;
+  transition: 300ms;
+}
+.work-exp-section .experience button:active {
+  background-color: #2F3734;
+  color: #E0E2DB;
+  border: 3px solid transparent;
+  transition: 150ms;
+}
+
+.experience .buttons {
+  display: flex;
+  gap: 3px;
+}
+
+.experience .add-detail {
+  justify-self: center;
+}
+
+/* work edit box */
+
+.experience .edit-box {
+  grid-area: 2 / 1 / 3 / 3;
+  display: grid;
+  grid-template-columns: repeat(4, 214px) ;
+  gap: 3px;
+}
+.experience .edit-box button.edit {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.experience .edit-box button.remove {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.experience .edit-box #company, .experience .edit-box #position,
+.experience .edit-box #startYear, .experience .edit-box #endYear {
+  align-self: center;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  border: none;
+  background-color: white;
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+.experience .edit-box #company, .experience .edit-box #position {
+  width: 366;
+}
+.experience .edit-box #company {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.experience .edit-box #position {
+  grid-area: 1 / 3 / 2 / 5;
+}
+.experience .edit-box #startYear, .experience .edit-box #endYear {
+  width: 183px;
+}
+.experience .edit-box button.edit, .experience .edit-box button.remove {
+  padding: 2px 6px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  color: #E0E2DB;
+  background-color: #2F3734;
+  border: 3px solid transparent;
+  border-radius: 3px;
+}
+.experience .edit-box button.edit:hover, .experience .edit-box button.remove:hover {
+  background-color: #E0E2DB;
+  color: #2F3734;
+  border: 3px solid #2F3734;
+  transition: 300ms;
+}
+.experience .edit-box button.edit:active, .experience .edit-box button.remove:active {
+  background-color: #2F3734;
+  color: #E0E2DB;
+  border: 3px solid transparent;
+  transition: 150ms;
+}
+
+/* work details list */
+
+.experience button.add-detail {
+  margin: 8px 25px;
+}
+
+.pop-up {
+  margin: 8px 25px;
+  display: flex;
+  gap: 3px;
+}
+.pop-up #detail {
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  border: none;
+  background-color: white;
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+
 /* ##C0354A cardinal
 #2F3734 onyx
 #E0E2DB alabaster */

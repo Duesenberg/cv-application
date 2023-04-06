@@ -46,34 +46,44 @@ class DegreeList extends Component {
                     type='text' name='fullName' id='fullName' 
                     onChange={editDegree} data-apid={application.id} 
                     data-degid={degree.id}
-                    placeholder={degree.name} required />, 
+                    placeholder={degree.name} required />
                   <input 
                     type='text' name='institution' id='institution' 
                     onChange={editDegree} data-apid={application.id} 
                     data-degid={degree.id}
-                    placeholder={degree.institution} required />, 
+                    placeholder={degree.institution} required />
                   <input 
                     type='date' name='startYear' id='startYear' 
                     onChange={editDegree} data-apid={application.id} 
                     data-degid={degree.id}
-                    placeholder={degree.startYear} required />-
+                    placeholder={degree.startYear} required />
                   <input 
                     type='date' name='endYear' id='endYear' 
                     onChange={editDegree} data-apid={application.id} 
                     data-degid={degree.id}
                     placeholder={degree.endYear} required />
+                    
+                  <button 
+                    className='edit' data-id={degree.id} 
+                    onClick={this.handleEditClick}>Edit</button>
+                  <button 
+                    data-id={degree.id} id={application.id} className='remove'
+                    onClick={deleteDegree}>Remove</button>
                 </div> :
                 <p className='text'>
                   {degree.name + ', ' + degree.institution + ', ' 
                   + degree.startYear + '-' + degree.endYear}
                 </p>
                 }
-              <button 
-                className='edit' data-id={degree.id} 
-                onClick={this.handleEditClick}>Edit</button>
-              <button 
-                data-id={degree.id} id={application.id} className='remove'
-                onClick={deleteDegree}>Remove</button>
+              {this.state.editMode !== true ?
+              <div className='buttons'>
+                <button 
+                  className='edit' data-id={degree.id} 
+                  onClick={this.handleEditClick}>Edit</button>
+                <button 
+                  data-id={degree.id} id={application.id} className='remove'
+                  onClick={deleteDegree}>Remove</button>
+              </div> : null}
           </div>)   
         })}
       </div>
