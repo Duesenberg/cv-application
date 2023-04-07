@@ -66,9 +66,6 @@ class DegreeList extends Component {
                   <button 
                     className='edit' data-id={degree.id} 
                     onClick={this.handleEditClick}>Edit</button>
-                  <button 
-                    data-id={degree.id} id={application.id} className='remove'
-                    onClick={deleteDegree}>Remove</button>
                 </div> :
                 <p className='text'>
                   {degree.name + ', ' + degree.institution + ', ' 

@@ -319,10 +319,7 @@
   gap: 3px;
 }
 .degree .edit-box button.edit {
-  grid-area: 2 / 3 / 3 / 4;
-}
-.degree .edit-box button.remove {
-  grid-area: 2 / 4 / 3 / 5;
+  grid-area: 2 / 3 / 3 / 5;
 }
 .degree .edit-box #fullName, .degree .edit-box #institution,
 .degree .edit-box #startYear, .degree .edit-box #endYear {
@@ -346,7 +343,7 @@
 .degree .edit-box #startYear, .degree .edit-box #endYear {
   width: 183px;
 }
-.degree .edit-box button.edit, .degree .edit-box button.remove {
+.degree .edit-box button.edit {
   padding: 2px 6px;
   font-family: 'Inter';
   font-size: 1.25rem;
@@ -355,13 +352,13 @@
   border: 3px solid transparent;
   border-radius: 3px;
 }
-.degree .edit-box button.edit:hover, .degree .edit-box button.remove:hover {
+.degree .edit-box button.edit:hover {
   background-color: #E0E2DB;
   color: #2F3734;
   border: 3px solid #2F3734;
   transition: 300ms;
 }
-.degree .edit-box button.edit:active, .degree .edit-box button.remove:active {
+.degree .edit-box button.edit:active {
   background-color: #2F3734;
   color: #E0E2DB;
   border: 3px solid transparent;
@@ -535,11 +532,9 @@
   gap: 3px;
 }
 .experience .edit-box button.edit {
-  grid-area: 2 / 3 / 3 / 4;
+  grid-area: 2 / 3 / 3 / 5;
 }
-.experience .edit-box button.remove {
-  grid-area: 2 / 4 / 3 / 5;
-}
+
 .experience .edit-box #company, .experience .edit-box #position,
 .experience .edit-box #startYear, .experience .edit-box #endYear {
   align-self: center;
@@ -562,7 +557,7 @@
 .experience .edit-box #startYear, .experience .edit-box #endYear {
   width: 183px;
 }
-.experience .edit-box button.edit, .experience .edit-box button.remove {
+.experience .edit-box button.edit {
   padding: 2px 6px;
   font-family: 'Inter';
   font-size: 1.25rem;
@@ -571,13 +566,13 @@
   border: 3px solid transparent;
   border-radius: 3px;
 }
-.experience .edit-box button.edit:hover, .experience .edit-box button.remove:hover {
+.experience .edit-box button.edit:hover {
   background-color: #E0E2DB;
   color: #2F3734;
   border: 3px solid #2F3734;
   transition: 300ms;
 }
-.experience .edit-box button.edit:active, .experience .edit-box button.remove:active {
+.experience .edit-box button.edit:active {
   background-color: #2F3734;
   color: #E0E2DB;
   border: 3px solid transparent;

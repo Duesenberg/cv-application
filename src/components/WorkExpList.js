@@ -97,9 +97,6 @@ class WorkExpList extends Component {
                   <button 
                     className='edit' data-id={experience.id}
                     onClick={this.handleEditClick}>Edit</button>
-                  <button 
-                    className='remove' id={application.id} 
-                    data-id={experience.id} onClick={deleteWork}>Remove</button>
                 </div> :
                 <div className='position-box'>
                   <div className='position'>
