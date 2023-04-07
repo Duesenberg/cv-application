@@ -74,18 +74,9 @@
   font-size: 1.75rem;
   font-weight: 700;
   border: none;
-  background-color: #E0E2DB;
+  background-color: white;
   border-radius: 3px;
   padding: 8px 12px;
-}
-.title-section input:focus {
-  outline: none;
-  background-color: white;
-  transition: 150ms;
-}
-.title-section input:hover {
-  background-color: white;
-  transition: 300ms;
 }
 
 /* ----------------------------------------- personal info section */
@@ -596,15 +587,41 @@
 /* work details list */
 
 .experience button.add-detail {
-  margin: 8px 25px;
+  margin: 8px 37px;
 }
 
-.pop-up {
+.experience .pop-up {
   margin: 8px 25px;
   display: flex;
   gap: 3px;
 }
-.pop-up #detail {
+.experience .pop-up #detail {
+  width: 660px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  border: none;
+  background-color: white;
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+
+.details-list .detail {
+  padding: 0px 25px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.details-list .detail .text {
+  margin: 0;
+  width: 660px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  color: #2F3734;
+  padding: 8px 12px;
+}
+.details-list .detail input {
+  margin: 0;
+  width: 660px;
   font-family: 'Inter';
   font-size: 1.25rem;
   border: none;
