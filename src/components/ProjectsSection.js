@@ -38,9 +38,8 @@ class ProjectsSection extends Component {
         application={application} hidePopUp={this.hidePopUp}
         addProject={addProject} addProjectInfo={addProjectInfo} /> :null}
 
-        {this.state.popUpVisible ? null:
         <button 
-          className='add-project' onClick={this.showPopUp}>Add Project</button>}
+          className='add-project' onClick={this.showPopUp}>Add</button>
 
         <ProjectsList 
           application={application} editProject={editProject}

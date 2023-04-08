@@ -38,9 +38,8 @@ class SkillSection extends Component {
         application={application} hidePopUp={this.hidePopUp}
         addSkill={addSkill} addSkillInfo={addSkillInfo} /> :null}
 
-        {this.state.popUpVisible ? null:
         <button 
-          className='add-skill' onClick={this.showPopUp}>Add Skill</button>}
+          className='add-skill' onClick={this.showPopUp}>Add</button>
 
         <SkillsList 
           application={application} editSkill={editSkill}

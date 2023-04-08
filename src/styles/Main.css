@@ -625,6 +625,157 @@
   padding: 8px 12px;
 }
 
+/* skill & projects section ------------------------------------ */
+
+.skill-section, .project-section {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.skill-section .name, .project-section .name {
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 20px 0 10px 0;
+  font-family: 'Audiowide';
+  color: #2F3734 ;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.skill-section button.add-skill, .project-section button.add-project {
+  grid-area: 1 / 2 / 2 / 3;
+  padding: 5px 12px;
+  font-family: 'Inter';
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #E0E2DB;
+  align-self: center;
+  background-color: #2F3734;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  justify-self: start;
+}
+.skill-section button.add-skill:hover, 
+.project-section button.add-project:hover {
+  background-color: #E0E2DB;
+  color: #2F3734;
+  border: 3px solid #2F3734;
+  transition: 300ms;
+}
+.skill-section button.add-skill:active, 
+.project-section button.add-project:active {
+  background-color: #2F3734;
+  color: #E0E2DB;
+  border: 3px solid transparent;
+  transition: 150ms;
+}
+
+/* popup */
+
+.skill-section .pop-up, .project-section .pop-up {
+  grid-column: 1 / 3;
+  margin: 8px 0 8px 12px;
+  display: flex;
+  gap: 3px;
+}
+.skill-section .pop-up #skill, .project-section .pop-up #project {
+  width: 703px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  border: none;
+  background-color: white;
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+
+.skill-section .pop-up .create-skill, .skill-section .pop-up .hide-popup,
+.project-section .pop-up .create-project, .project-section .pop-up .hide-popup {
+  padding: 2px 6px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  color: #E0E2DB;
+  background-color: #2F3734;
+  border: 3px solid transparent;
+  border-radius: 3px;
+}
+.skill-section .pop-up .create-skill:hover, 
+.skill-section .pop-up .hide-popup:hover,
+.project-section .pop-up .create-project:hover, 
+.project-section .pop-up .hide-popup:hover {
+  background-color: #E0E2DB;
+  color: #2F3734;
+  border: 3px solid #2F3734;
+  transition: 300ms;
+}
+.skill-section .pop-up .create-skill:active, 
+.skill-section .pop-up .hide-popup:active,
+.project-section .pop-up .create-project:active, 
+.project-section .pop-up .hide-popup:active {
+  background-color: #2F3734;
+  color: #E0E2DB;
+  border: 3px solid transparent;
+  transition: 150ms;
+}
+
+/* skills list */
+
+.skill-section .skills-list, .project-section .projects-list {
+  grid-column: 1 / 3;
+  margin: 8px 0;
+}
+
+.skill-section .skills-list .skill, .project-section .projects-list .project {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.skill-section .skills-list .skill .text, 
+.project-section .projects-list .project .text {
+  margin: 0;
+  width: 685px;
+  font-family: 'Inter';
+  color: #2F3734;
+  font-size: 1.25rem;
+  padding: 8px 12px;
+}
+.skill-section .skills-list .skill input, 
+.project-section .projects-list .project input {
+  margin: 0;
+  width: 685px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  border: none;
+  background-color: white;
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+
+.skill-section .skills-list .skill button, 
+.project-section .projects-list .project button {
+  padding: 2px 6px;
+  font-family: 'Inter';
+  font-size: 1.25rem;
+  color: #E0E2DB;
+  background-color: #2F3734;
+  border: 3px solid transparent;
+  border-radius: 3px;
+}
+.skill-section .skills-list .skill button:hover, 
+.project-section .projects-list .project button:hover {
+  background-color: #E0E2DB;
+  color: #2F3734;
+  border: 3px solid #2F3734;
+  transition: 300ms;
+}
+.skill-section .skills-list .skill button:active, 
+.project-section .projects-list .project button:active {
+  background-color: #2F3734;
+  color: #E0E2DB;
+  border: 3px solid transparent;
+  transition: 150ms;
+}
+
 /* ##C0354A cardinal
 #2F3734 onyx
 #E0E2DB alabaster */
