@@ -130,6 +130,24 @@ function selectCV (e) {
   })
 }
 
+//save to local storage
+function toLocalStorage () {
+  window.localStorage.setItem("state", JSON.stringify(this.state));
+}
+
+//load local storage
+function fromLocalStorage () {
+  let savedState = window.localStorage.getItem("state");
+  savedState = JSON.parse(savedState);
+
+  if (savedState !== null)
+  this.setState({
+    application: savedState.application,
+    applications: savedState.applications,
+    selectedApplication: null
+  })
+}
 
 
-export { addTitle, addCV, deleteApplication, selectCV };
+export { addTitle, addCV, deleteApplication, selectCV, toLocalStorage,
+  fromLocalStorage };

@@ -5,7 +5,8 @@ import uniqid from "uniqid";
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Main from './components/Main';
-import { addCV, addTitle, deleteApplication, selectCV } from './appMethods';
+import { addCV, addTitle, deleteApplication, selectCV, 
+  toLocalStorage, fromLocalStorage } from './appMethods';
 import editCVTitle from './components/titleSecMethods';
 import { editPersonalInfo } from './components/persInfoSecMethods';
 import { addDegree, editDegree, addDegreeInfo,
@@ -105,6 +106,8 @@ class App extends Component {
     this.addProjectInfo = addProjectInfo.bind(this);
     this.editProject = editProject.bind(this);
     this.deleteProject = deleteProject.bind(this);
+    this.toLocalStorage = toLocalStorage.bind(this);
+    this.fromLocalStorage = fromLocalStorage.bind(this);
   }
   
   render() {
@@ -117,6 +120,7 @@ class App extends Component {
           applications={this.state.applications}
           deleteApplication={this.deleteApplication}
           selectApplication={this.selectCV}
+          fromLocalStorage={this.fromLocalStorage}
           />
         <Main
           state={this.state}
@@ -132,6 +136,7 @@ class App extends Component {
           editSkill={this.editSkill} deleteSkill={this.deleteSkill}
           addProject={this.addProject} addProjectInfo={this.addProjectInfo}
           editProject={this.editProject} deleteProject={this.deleteProject}
+          toLocalStorage={this.toLocalStorage}
        />
       </div>
     );

@@ -776,6 +776,36 @@
   transition: 150ms;
 }
 
+.actions-buttons {
+  border-top: 3px solid #2F3734;
+  padding: 12px 24px;
+  display: flex;
+  gap: 6px;
+  justify-content: end;
+}
+.actions-buttons button {
+  padding: 5px 12px;
+  font-family: 'Inter';
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #E0E2DB;
+  background-color: #C0354A;
+  border: 3px solid transparent;
+  border-radius: 3px;
+}
+.actions-buttons button:hover {
+  background-color: #E0E2DB;
+  color: #2F3734;
+  border: 3px solid #2F3734;
+  transition: 300ms;
+}
+.actions-buttons button:active {
+  background-color: #C0354A;
+  color: #E0E2DB;
+  border: 3px solid transparent;
+  transition: 150ms;
+}
+
 /* ##C0354A cardinal
 #2F3734 onyx
 #E0E2DB alabaster */

@@ -32,10 +32,11 @@ class Sidebar extends Component {
   render() {
     const { 
       titleAdd, application, applications, addApplication, deleteApplication,
-      selectApplication } = this.props;
+      selectApplication, fromLocalStorage } = this.props;
 
     return (
       <div className="sidebar">
+        <button className='load-application' onClick={fromLocalStorage}>LOAD EXISTING</button>
         <button className='add-application' onClick={this.showPopUp}>CREATE NEW</button>
         {this.state.popUpVisible ? 
           <AddCVPopUp 

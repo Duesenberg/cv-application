@@ -32,7 +32,7 @@
   box-shadow: 0px 0px 15px black;
 }
 
-.sidebar .add-application {
+.sidebar .add-application, .sidebar .load-application {
   font-family: 'Inter';
   font-size: 1.5rem;
   font-weight: 700;
@@ -42,12 +42,12 @@
   border: none;
   border-radius: 3px;
 }
-.sidebar .add-application:hover {
+.sidebar .add-application:hover, .load-application:hover {
   animation: space-apart 300ms;
   background-color: white;
   transition: 100ms;
 }
-.sidebar .add-application:active {
+.sidebar .add-application:active, .load-application:active {
   background-color: #E0E2DB;
   transition: 100ms;
 }

@@ -16,7 +16,7 @@ class Main extends Component {
       addWorkInfo, deleteWork, editWork, detailAdd, 
       addDetailInfo, detailEdit, deleteDetail, addSkill, 
       addSkillInfo, editSkill, deleteSkill, addProject, 
-      addProjectInfo, editProject, deleteProject } = this.props;
+      addProjectInfo, editProject, deleteProject, toLocalStorage } = this.props;
 
     return (
       <div className="main">
@@ -49,6 +49,11 @@ class Main extends Component {
                     application={application} addProject={addProject} 
                     addProjectInfo={addProjectInfo} editProject={editProject}
                     deleteProject={deleteProject} />
+                  <div className='actions-buttons'>
+                    <button 
+                      className='save' onClick={toLocalStorage}>Save</button>
+                    <button className='print'>Print</button>
+                  </div>
               </div>
             )
           }
