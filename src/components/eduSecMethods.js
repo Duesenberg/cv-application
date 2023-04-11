@@ -1,4 +1,5 @@
 import uniqid from 'uniqid';
+import moment from 'moment';
 
 //adding info before creating new degree
 function addDegreeInfo (e) {
@@ -16,11 +17,13 @@ function addDegreeInfo (e) {
     case "institution": 
       degree.institution = e.target.value;
       break;
-    case "startYear": 
-      degree.startYear = e.target.value;
+    case "startYear":
+      const formattedDateStart = moment(e.target.value).format('MMMM Do YYYY');
+      degree.startYear = formattedDateStart;
       break;
-    case "endYear": 
-      degree.endYear = e.target.value;
+    case "endYear":
+      const formattedDateEnd = moment(e.target.value).format('MMMM Do YYYY');
+      degree.endYear = formattedDateEnd;
       break;
     default: break;
   }

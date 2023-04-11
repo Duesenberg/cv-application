@@ -100,8 +100,8 @@ class WorkExpList extends Component {
                 </div> :
                 <div className='position-box'>
                   <div className='position'>
-                    {experience.company + ', ' + experience.position + 
-                    '(' + experience.startYear + ' - ' + experience.endYear + ')'}
+                    {experience.company + ', ' + experience.position + ', ' +
+                    experience.startYear + '-' + experience.endYear}
                   </div>
                   <div className='buttons'>
                     <button 

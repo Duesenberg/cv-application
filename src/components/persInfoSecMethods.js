@@ -1,5 +1,6 @@
 //methods used in App.js for the personal info section in Main.js
 //and in PersInfoSection.js component
+import moment from 'moment';
 
 function editPersonalInfo (e) {
   const index = this.state.applications.findIndex((application) => {
@@ -18,7 +19,9 @@ function editPersonalInfo (e) {
       break;
     case "mail": application.personalInfo.email = e.target.value;
       break;
-    case "dob": application.personalInfo.dateOfBirth = e.target.value;
+    case "dob": 
+      const formattedDate = moment(e.target.value).format('MMMM Do YYYY');
+      application.personalInfo.dateOfBirth = formattedDate;
       break;
     default:
       break;

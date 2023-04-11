@@ -1,4 +1,5 @@
 import uniqid from 'uniqid';
+import moment from 'moment';
 
 //adding info before creating new work exp
 function addWorkInfo (e) {
@@ -16,11 +17,13 @@ function addWorkInfo (e) {
     case "position": 
       experience.position = e.target.value;
       break;
-    case "startYear": 
-      experience.startYear = e.target.value;
+    case "startYear":
+      const formattedDateStart = moment(e.target.value).format('MMMM Do YYYY');
+      experience.startYear = formattedDateStart;
       break;
-    case "endYear": 
-      experience.endYear = e.target.value;
+      case "endYear": 
+      const formattedDateEnd = moment(e.target.value).format('MMMM Do YYYY');
+      experience.endYear = formattedDateEnd;
       break;
     default: break;
   }
