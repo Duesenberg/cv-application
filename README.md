@@ -8,3 +8,4 @@ Assets used:
 
   Icons:
    - https://fontawesome.com/icons/github-alt?f=brands&s=solid&an=shake&pc=%23ffffff
+   - https://www.svgrepo.com/svg/481448/hedgehog-1

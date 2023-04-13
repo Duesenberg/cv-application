@@ -7,7 +7,10 @@ import EduSection from './EduSection';
 import WorkSection from './WorkSection';
 import SkillSection from './SkillSection';
 import ProjectsSection from './ProjectsSection';
+import ReactToPrint from 'react-to-print';
+import MainPrint from './print/MainPrint';
 import '../styles/Main.css';
+import '../styles/MainPrint.css';
 
 class Main extends Component {
   render() {
@@ -52,7 +55,21 @@ class Main extends Component {
                   <div className='actions-buttons'>
                     <button 
                       className='save' onClick={toLocalStorage}>Save</button>
-                    <button className='print'>Print</button>
+                    <div>
+                      <ReactToPrint
+                        trigger={() => {
+                          // NOTE: could just as easily return <SomeComponent />. Do NOT pass an `onClick` prop
+                          // to the root node of the returned component as it will be overwritten.
+                          return <button className='print'>Print</button>;
+                        }}
+                        content={() => this.componentRef}
+                      />
+                      <div 
+                        className='print-comp' 
+                        ref={el => (this.componentRef = el)}>
+                          <MainPrint applications={applications} state={state} />
+                      </div>
+                    </div>
                   </div>
               </div>
             )

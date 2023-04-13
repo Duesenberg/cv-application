@@ -1,0 +1,80 @@
+.main-print {
+	grid-area: 2 / 2 / 3 / 3;
+  padding: 70px 70px 70px 100px;
+  background-color: white;
+}
+
+.main-print .personal-info-section {
+  padding: 15px 0 65px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.main-print .personal-info-section .name-address {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px black solid;
+}
+.main-print .personal-info-section .dob-phone-mail {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.main-print p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.35rem;
+  color: black;
+}
+
+.main-print .education-section, .main-print .work-exp-section,
+.main-print .skill-section, .main-print .project-section {
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 30px;
+}
+.main-print .education-section .name, .main-print .work-exp-section .name,
+.main-print .skill-section .name, .main-print .project-section .name {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  color: black;
+}
+.main-print .education-section .degrees, 
+.main-print .work-exp-section .experiences,
+.main-print .skill-section .skills-list, 
+.main-print .project-section .projects-list {
+  padding: 0;
+  margin: 0;
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-print .education-section .degrees .degree,
+.main-print .work-exp-section .experiences .experience,
+.main-print .skill-section .skills-list .skill, 
+.main-print .project-section .projects-list .project {
+  margin: 0;
+  padding: 0;
+}
+.main-print .education-section .degrees p,
+.main-print .work-exp-section .experiences .experience p,
+.main-print .skill-section .skills-list .skill p, 
+.main-print .project-section .projects-list .project p {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  color: black;
+}
+.main-print .work-exp-section .experiences .experience .details-list p {
+  font-style: italic;
+}
